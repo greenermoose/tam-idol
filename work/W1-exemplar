@@ -1,0 +1,59 @@
+W1 TAM-IDOL, THE STANDARD, AND TAM-MAIL FOLLOWING IT
+
+Date: 2026-11-18
+AI harness: Claude Code 2.1.327
+AI model: claude-opus-5-5
+Commits: the commit that adds this record
+
+
+GUIDANCE
+
+  Fred: "Finish setting up the tam-mail repo with the same work folder
+  and other process folders as tam-clam and tam-pane. We should create
+  a tam-idol repo that is the exemplar for how our repos work,
+  including our READMEs, COPYRIGHT, LICENSE, ROADMAP.md, VERSION, and
+  the arch, bugs, ideas, plans, reviews, and work folders. Let's get
+  everythign documented in tam-idol and then we can endeavor to get all
+  the other repos up to snuff. The goal will be to standardize on a set
+  of folders for every repos and standard operating procedures that we
+  apply to every project."
+
+  Fred's answers to the planning questions: tam-idol is public on
+  GitHub with dev pushed; reviews are named R<n>-<name>.md; the
+  standard working branch is dev.
+
+  Fred, on the plan: "Change AI-PROVENANCE.md to AI-BLAME.md. Blame
+  rather than provenance is the new term for tracking which AI did
+  what."
+
+
+DONE
+
+  - tam-idol created: README (the standard set, the procedures, the
+    checklists for a new repository and for bringing one up to
+    standard), COPYRIGHT, LICENSE (tam-pane's, byte for byte), VERSION
+    0.1.0, ROADMAP.md, UPSTREAM.md, AI-BLAME.md.
+  - The six README-<folder> files written about "this repository", from
+    tam-pane's text, with an IN THIS REPOSITORY section at the end.
+    reviews/README-reviews is new, built from tam-edit's and tamlinux's
+    review records.
+  - arch/principles.md, arch/layout.md, plans/P1-standard.md, and three
+    starter idea notes (GNU standards, decision records, Keep a
+    Changelog).
+  - tools/idol-check: reports missing files, folder READMEs that differ
+    from tam-idol's, misnamed records and a missing dev branch. Run
+    over every repository: tam-idol and tam-mail pass, the others list
+    their gaps (summed up in ROADMAP.md).
+  - tools/pull-references copied from tam-pane.
+  - tam-mail brought up to standard (its own W1).
+
+
+FAILED
+
+  - Nothing.
+
+
+HANDOFF
+
+  - Bring tam-clam up to standard, then the rest in ROADMAP.md's order.
+    Details in work/WHATNOW.

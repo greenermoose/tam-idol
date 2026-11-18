@@ -1,0 +1,4 @@
+# Reference clones of other projects, read by tools/pull-references.
+# One project per line:  name  url  local-path  branch  depth
+# depth: "full" for a normal clone, or a number for a shallow clone.
+# Lines starting with # are comments. Add a project by adding a line.

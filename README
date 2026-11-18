@@ -1,0 +1,157 @@
+TAM-IDOL - THE EXEMPLAR TAMLINUX REPOSITORY
+
+tam-idol is the model every Tamlinux repository copies. It holds the
+standard set of files and folders, the text that goes in each folder's
+README, and the procedures every project follows. When a repository
+does something differently, either the repository changes or tam-idol
+does, so that there is one way of working across all our projects.
+
+tam-idol has no program in it. Its version (VERSION) is the version of
+the standard, and each repository's README says which version it
+follows, for example:
+
+  Follows the tam-idol 0.1.0 standard.
+
+tools/idol-check reports what a repository is missing.
+
+
+THE STANDARD SET
+
+  Every repository has these:
+
+  README            plain text: what the project is, how to build and
+                    use it, WHERE THINGS ARE, and the tam-idol version
+  COPYRIGHT         copyright and license notices, including those of
+                    code taken from other projects
+  LICENSE           the license text (GNU GPL, version 3)
+  VERSION           the version, one line, for example 0.0.1
+  ROADMAP.md        milestones with their version numbers
+  UPSTREAM.md       every piece of code taken from another project
+  AI-BLAME.md       how this repository records which AI did what
+  .gitignore        build output and nothing else
+
+  arch/             architecture: how the code is built, and why
+  bugs/             one record per bug: B1, B2, ...
+  ideas/            ideas from other projects, one file per project
+  plans/            one plan per work phase: P1, P2, ...
+  reviews/          one record per review: R1, R2, ...
+  work/             WHATNOW, and one record per work session: W1, W2,
+                    ...
+
+  Every folder has a README-<folder> (README-arch, README-bugs, ...)
+  that says what goes in it and how. The text above its IN THIS
+  REPOSITORY section is copied from tam-idol unchanged; the section
+  itself describes the folder's contents in that repository.
+
+  A repository with code adds:
+
+  Makefile          make, make test, make install, make uninstall,
+                    make clean; PREFIX defaults to $HOME/.local
+  src/, include/    the source
+  tests/            the tests that make test runs
+  tools/            helper scripts for developing the project
+
+  ideas/sources and tools/pull-references are standard wherever a
+  repository keeps local clones of the projects it learns from.
+
+  arch/layout.md lists the set with the reason for each entry.
+
+
+THE PROCEDURES
+
+  Starting and ending a session. Read work/WHATNOW first: its NEXT
+  section is the to-do list. At the end, write one record, W<n>-<name>,
+  and revise WHATNOW as a whole, and commit both with the work.
+  work/README-work has the formats.
+
+  Bugs. One file per bug, B<n>-<name>.md, with a status and a severity.
+  A number is never reused. bugs/README-bugs.
+
+  Plans. One plan per work phase, P<n>-<name>.md, covering a range of
+  versions from ROADMAP.md. Fred's decisions go into the plan with
+  their date; until then a remark from Fred is context, not a decision.
+  plans/README-plans.
+
+  Reviews. One file per review, R<n>-<name>.md, naming the exact commit
+  examined. A confirmed finding becomes a bug. A review is evidence to
+  check, not permission to ship. reviews/README-reviews.
+
+  Ideas. One file per project we learn from, with a verdict on each
+  idea: adopt, consider or reject. Code taken, not just an idea, is also
+  recorded in UPSTREAM.md and COPYRIGHT. ideas/README-ideas.
+
+  Architecture. arch/ describes the code as it is. A change that alters
+  a structure, an algorithm or a dependency updates arch/ in the same
+  commit. Where code and document disagree, the document is the bug.
+  arch/README-arch.
+
+  Versions. Every code change bumps VERSION in the same commit: the
+  minor number for a feature, the patch number for a fix. The program's
+  --version prints it, so anyone can see which build they run.
+
+  Commits. Commit only the paths you changed (git commit -- <paths>),
+  never git add -A or git commit -a. Commits made with AI help carry
+  Co-authored-by, AI-Tool (with the version) and AI-Model trailers.
+  Never amend a commit that may have been pushed.
+
+  Branches. Work happens on dev, and agents push dev freely. main, tags
+  and releases move only on Fred's word.
+
+  Privacy. These repositories are public. Nothing in them names a
+  session ID, a transcript, a home-directory path, a private repository
+  or a private decision number. Fred is "Fred"; his full name appears
+  only in COPYRIGHT.
+
+  Writing. Plain words. README and every README-<folder>, the work
+  records and WHATNOW are plain text, lines no longer than 76
+  characters, section names in capitals. The .md files are Markdown
+  that still reads well as plain text. No emojis.
+
+
+STARTING A NEW REPOSITORY
+
+  1. git init -b dev in ~/Code/tamlinux/<name>.
+  2. Copy from tam-idol: COPYRIGHT, LICENSE, AI-BLAME.md, UPSTREAM.md,
+     .gitignore, and every folder's README-<folder>. Copy
+     work/README-work and tools/pull-references with them.
+  3. Replace "tam-idol" with the project's name in COPYRIGHT and
+     AI-BLAME.md, and rewrite each IN THIS REPOSITORY section.
+  4. Write README, VERSION (0.0.0 until there is code) and ROADMAP.md.
+  5. Write work/WHATNOW and work/W1-<name> for the session.
+  6. Run tools/idol-check on the new repository; it must pass.
+
+
+BRINGING A REPOSITORY UP TO STANDARD
+
+  1. Run tools/idol-check <repository>. It lists what is missing and
+     which README-<folder> files differ from tam-idol's text.
+  2. Add what is missing and bring each README-<folder> into line,
+     moving the repository's own content into IN THIS REPOSITORY.
+  3. Record the change in a W record and in WHATNOW, and say in README
+     which tam-idol version the repository follows.
+
+  Changing the standard itself starts here: change tam-idol, bump its
+  VERSION, and note the change in ROADMAP.md. Repositories catch up when
+  they are next worked on.
+
+
+WHERE THINGS ARE
+
+  arch/            why the standard is the way it is, and its layout
+  bugs/            defects in the standard or in idol-check
+  ideas/           conventions of other projects we learn from
+  plans/           the plan to bring every repository up to standard
+  reviews/         reviews of the standard
+  work/            WHATNOW (read it first) and the work records
+  tools/           idol-check and pull-references
+  ROADMAP.md       versions of the standard and the repositories to do
+  UPSTREAM.md      code taken from other projects (none)
+  AI-BLAME.md      how AI work is recorded here
+  COPYRIGHT        copyright and license notices
+  LICENSE          GNU General Public License, version 3
+
+
+LICENSE
+
+  tam-idol is free software under the GNU General Public License,
+  version 3 or later. See COPYRIGHT.

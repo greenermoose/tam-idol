@@ -1,0 +1,51 @@
+WHATNOW
+
+What tam-idol is doing now and what comes next. Read this first; revise
+it at the end of every session (work/README-work).
+
+Updated: 2026-11-18, with W1
+
+
+STATE
+
+  Version 0.1.0 on branch dev. The standard is written down: README has
+  the standard set and the procedures, arch/layout.md the list that
+  tools/idol-check checks, and each README-<folder> the text that every
+  repository copies above its IN THIS REPOSITORY section.
+
+  tam-mail is the first repository to follow the standard (W1). Every
+  other repository still has gaps; ROADMAP.md lists the ones they share.
+
+
+NEXT
+
+  1. Bring tam-clam up to standard, following plans/P1-standard.md: run
+     tools/idol-check ../tam-clam, rename AI_PROVENANCE.md to
+     AI-BLAME.md, make each README-<folder> standard with tam-clam's own
+     text under IN THIS REPOSITORY, add reviews/README-reviews and the
+     README line, then write tam-clam's W record and revise its
+     WHATNOW. Done when idol-check passes. Claim only those paths; other
+     sessions may be working in tam-clam.
+  2. The same for tam-pane, then the rest in ROADMAP.md's order.
+  3. When a repository shows the standard is wrong or missing
+     something, change tam-idol first, bump VERSION, and say why in
+     ROADMAP.md.
+
+
+WAITING FOR FRED
+
+  - The open points in ROADMAP.md: develop or dev in libtam, tam,
+    tamlinux, tamlinux-tools and LIFECYCLE.md; whether tamlinux's
+    commands/ and desktop/ layout is allowed; renaming the remaining
+    "provenance" documents and tools to "blame".
+
+
+WATCH OUT
+
+  - tools/idol-check and arch/layout.md hold the same lists; change
+    both in the same commit.
+  - A README-<folder> change in tam-idol makes every repository that
+    copied the old text fail idol-check. Bump VERSION and expect to
+    update them.
+  - /bin/sh here is bash. Keep the tools POSIX; no dash is installed to
+    test them with.

@@ -1,0 +1,105 @@
+#!/bin/sh
+# Check a repository against the tam-idol standard (arch/layout.md).
+#
+#   tools/idol-check <repository> ...   report each gap; exit 1 if any
+#   tools/idol-check --list             print the standard set
+#
+# The lists below are arch/layout.md's; change both in the same commit.
+# Read-only: it never changes the repository it checks.
+set -u
+idol=$(cd "$(dirname "$0")/.." && pwd)
+version=$(cat "$idol/VERSION")
+
+files='README COPYRIGHT LICENSE VERSION ROADMAP.md UPSTREAM.md AI-BLAME.md .gitignore'
+folders='arch bugs ideas plans reviews work'
+marker='IN THIS REPOSITORY'
+
+if [ "${1:-}" = --list ]; then
+	echo "tam-idol $version standard set:"
+	for f in $files; do echo "  $f"; done
+	for d in $folders; do echo "  $d/README-$d"; done
+	echo "  work/WHATNOW"
+	echo "  with reference clones: ideas/sources, tools/pull-references"
+	echo "  with code: Makefile, src/, tests/"
+	echo "  branch: dev"
+	exit 0
+fi
+if [ $# -eq 0 ]; then
+	echo "usage: idol-check <repository> ... | --list" >&2
+	exit 2
+fi
+
+# The standard part of a README-<folder>: everything above the marker.
+standard() { sed "/^$marker\$/,\$d" "$1"; }
+
+status=0
+for repo in "$@"; do
+	name=$(basename "$(cd "$repo" && pwd)")
+	gaps=0
+	gap() { echo "$name: $*"; gaps=$((gaps + 1)); }
+
+	for f in $files; do
+		[ -f "$repo/$f" ] || gap "missing $f"
+	done
+	if [ -f "$repo/LICENSE" ] && ! cmp -s "$repo/LICENSE" "$idol/LICENSE"; then
+		gap "LICENSE differs from tam-idol's"
+	fi
+	if [ -f "$repo/README" ] &&
+		! grep -q 'Follows the tam-idol [0-9][0-9.]* standard' "$repo/README"; then
+		gap "README does not say which tam-idol version it follows"
+	fi
+
+	for d in $folders; do
+		r="$d/README-$d"
+		if [ ! -f "$repo/$r" ]; then
+			gap "missing $r"
+		elif ! grep -q "^$marker\$" "$repo/$r"; then
+			gap "$r has no '$marker' section"
+		elif [ "$(standard "$repo/$r")" != "$(standard "$idol/$r")" ]; then
+			gap "$r differs from tam-idol's above '$marker'"
+		fi
+	done
+	[ -f "$repo/work/WHATNOW" ] || gap "missing work/WHATNOW"
+
+	# Records: B<n>-<name>.md, P<n>-<name>.md, R<n>-<name>.md, W<n>-<name>.
+	for pair in bugs:B:.md plans:P:.md reviews:R:.md work:W:; do
+		d=${pair%%:*}; rest=${pair#*:}; letter=${rest%%:*}; ext=${rest#*:}
+		[ -d "$repo/$d" ] || continue
+		for p in "$repo/$d"/*; do
+			[ -f "$p" ] || continue
+			b=$(basename "$p")
+			case $b in
+			README-*|WHATNOW|sources) continue ;;
+			esac
+			if ! echo "$b" | grep -Eq "^$letter[0-9]+-[a-z0-9.-]+$ext\$"; then
+				gap "$d/$b is not named $letter<n>-<name>$ext"
+			fi
+		done
+	done
+
+	if [ -f "$repo/ideas/sources" ] && [ ! -x "$repo/tools/pull-references" ]; then
+		gap "has ideas/sources but no tools/pull-references"
+	fi
+	if [ -x "$repo/tools/pull-references" ] && [ ! -f "$repo/ideas/sources" ]; then
+		gap "has tools/pull-references but no ideas/sources"
+	fi
+
+	if [ -f "$repo/Makefile" ] || [ -d "$repo/src" ]; then
+		[ -f "$repo/Makefile" ] || gap "has src/ but no Makefile"
+		[ -d "$repo/src" ] || gap "has a Makefile but no src/"
+		[ -d "$repo/tests" ] || gap "has code but no tests/"
+	fi
+
+	if [ -d "$repo/.git" ] &&
+		! git -C "$repo" rev-parse -q --verify refs/heads/dev >/dev/null &&
+		! git -C "$repo" rev-parse -q --verify refs/remotes/origin/dev >/dev/null; then
+		gap "has no dev branch"
+	fi
+
+	if [ "$gaps" -eq 0 ]; then
+		echo "$name: follows the tam-idol $version standard"
+	else
+		status=1
+	fi
+done
+exit $status
