@@ -59,8 +59,10 @@ NEXT
 
 WAITING FOR FRED
 
-  - Whether tam-edit's c11 branch moves to dev.
   - Approval of the tamlinux plan, once NEXT item 4 has written it.
+
+  tam-edit is settled: it started fresh on 2026-11-18 as a new
+  repository on dev, with the old fork archived as tam-edit-micro-fork.
 
 
 WATCH OUT

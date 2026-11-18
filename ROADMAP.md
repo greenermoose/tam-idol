@@ -74,5 +74,3 @@ its own session.
   `bugs/0001-...` records become `B1-...`; tam-data's upper-case plan
   names become lower case; `bugs/_template.md` files give way to the
   template in `README-bugs`. Each rename keeps the record's text.
-- **tam-edit's branch.** tam-edit works on `c11` and has no `develop`;
-  whether it moves to `dev` is Fred's call.
