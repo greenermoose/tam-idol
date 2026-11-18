@@ -68,3 +68,4 @@ further change for it.
 ## Done
 
 - tam-mail: 2026-11-18 (tam-idol 0.1.0).
+- tam-file: 2026-11-18 (tam-idol 0.1.0).

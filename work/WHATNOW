@@ -3,7 +3,7 @@ WHATNOW
 What tam-idol is doing now and what comes next. Read this first; revise
 it at the end of every session (work/README-work).
 
-Updated: 2026-11-18, with W1 (revised after Fred's decisions)
+Updated: 2026-11-18, with W2
 
 
 STATE
@@ -13,8 +13,8 @@ STATE
   tools/idol-check checks, and each README-<folder> the text that every
   repository copies above its IN THIS REPOSITORY section.
 
-  tam-mail is the first repository to follow the standard (W1). Every
-  other repository still has gaps; ROADMAP.md lists the ones they share.
+  tam-mail (W1) and tam-file (W2) follow the standard. Every other
+  repository still has gaps; ROADMAP.md lists the ones they share.
 
 
 NEXT

@@ -1,0 +1,37 @@
+W2 BRINGING TAM-FILE UP TO THE TAM-IDOL STANDARD
+
+Date: 2026-11-18
+AI harness: agy 1.5.11
+AI model: gemini-4-hydrogen-medium
+Commits: the commit that adds this record
+
+
+GUIDANCE
+
+  Fred: "Take the slice of work for tam-idol. I forgot that we should
+  make sure the tam-file repo has all the required folders, including
+  work."
+
+  Fred (on docs/ai/): "No, docs/ai needs to get moved to work."
+
+
+DONE
+
+  - Brought tam-file up to the tam-idol 0.1.0 standard (its own W2):
+    added VERSION 0.0.0, UPSTREAM.md, AI-BLAME.md, reviews/, work/,
+    ideas/sources (yazi) and tools/pull-references; migrated docs/ai/
+    into work/W1-publication; updated README, COPYRIGHT and the folder
+    READMEs.
+  - tools/idol-check ../tam-file passes.
+  - Recorded tam-file in plans/P1-standard.md and revised work/WHATNOW.
+
+
+FAILED
+
+  - Nothing.
+
+
+HANDOFF
+
+  - Continue NEXT in work/WHATNOW: tam-clam is next for the standard,
+    plus the three decided items (dev branch, blame, tamlinux plan).
