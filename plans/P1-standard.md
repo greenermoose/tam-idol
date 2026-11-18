@@ -58,8 +58,12 @@ git, grep, sed and cmp.
 
 ## Open points
 
-ROADMAP.md lists them: branch names, the tamlinux layout, blame and
-provenance, and renaming existing records.
+Fred decided three on 2026-11-18: `develop` becomes `dev` everywhere;
+tamlinux is re-examined, cleaned up and reorganized to the standard;
+"blame" replaces "provenance" everywhere. ROADMAP.md has the detail and
+what is still to settle. Each is separate work, not a step of this plan,
+but a repository brought up to standard after its part is done needs no
+further change for it.
 
 ## Done
 

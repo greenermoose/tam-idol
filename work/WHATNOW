@@ -3,7 +3,7 @@ WHATNOW
 What tam-idol is doing now and what comes next. Read this first; revise
 it at the end of every session (work/README-work).
 
-Updated: 2026-11-18, with W1
+Updated: 2026-11-18, with W1 (revised after Fred's decisions)
 
 
 STATE
@@ -19,25 +19,48 @@ STATE
 
 NEXT
 
+  Fred decided three things on 2026-11-18 and left the work for later
+  sessions (ROADMAP.md, "Decided, waiting for a session"). None is
+  started. Take one per session.
+
   1. Bring tam-clam up to standard, following plans/P1-standard.md: run
      tools/idol-check ../tam-clam, rename AI_PROVENANCE.md to
      AI-BLAME.md, make each README-<folder> standard with tam-clam's own
      text under IN THIS REPOSITORY, add reviews/README-reviews and the
      README line, then write tam-clam's W record and revise its
      WHATNOW. Done when idol-check passes. Claim only those paths; other
-     sessions may be working in tam-clam.
-  2. The same for tam-pane, then the rest in ROADMAP.md's order.
-  3. When a repository shows the standard is wrong or missing
+     sessions may be working in tam-clam. Then tam-pane, then the rest
+     in ROADMAP.md's order.
+  2. Rename develop to dev in libtam, tam, tamlinux, tamlinux-packages
+     and tamlinux-tools. First check each repository's GitHub default
+     branch and open pull requests, and grep for every use of develop
+     as a branch name: LIFECYCLE.md, the agent guides and routing,
+     tamlinux-packages' tests and candidate preparation, fred-stage and
+     tam-deploy. Rename the branch locally and on GitHub, change the
+     references in the same sitting, and leave test and main alone.
+     Done when no repository has a develop branch and idol-check stops
+     reporting "has no dev branch" for them.
+  3. Blame everywhere: rename every AI_PROVENANCE.md to AI-BLAME.md,
+     and rename "provenance" in tamlinux's
+     docs/ai-provenance-standard.md, the ai-provenance skill, the agent
+     guides, routing and memories, and the private ledger. Change each
+     link in the same commit as the file it points to, then update the
+     link in tam-idol's AI-BLAME.md. Ask Fred before rewriting dated
+     historical records. Changes reach tamlinux's main only on Fred's
+     word.
+  4. Re-examine tamlinux: survey what it holds and write a plan for
+     Fred's review (what stays, moves or goes; how packaging, tests and
+     deployment keep working; how it ends up following the standard).
+     Move or delete nothing until Fred has approved the plan.
+  5. When a repository shows the standard is wrong or missing
      something, change tam-idol first, bump VERSION, and say why in
      ROADMAP.md.
 
 
 WAITING FOR FRED
 
-  - The open points in ROADMAP.md: develop or dev in libtam, tam,
-    tamlinux, tamlinux-tools and LIFECYCLE.md; whether tamlinux's
-    commands/ and desktop/ layout is allowed; renaming the remaining
-    "provenance" documents and tools to "blame".
+  - Whether tam-edit's c11 branch moves to dev.
+  - Approval of the tamlinux plan, once NEXT item 4 has written it.
 
 
 WATCH OUT

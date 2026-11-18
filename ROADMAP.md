@@ -46,22 +46,33 @@ Beyond those, `tools/idol-check <repository>` gives the full list.
 Every repository passes `tools/idol-check`, and a new repository starts
 from tam-idol.
 
-## Open points for Fred
+## Decided, waiting for a session
 
-- **Branch names.** The standard working branch is dev. libtam, tam,
-  tamlinux and tamlinux-tools work on develop, and LIFECYCLE.md names
-  develop. Renaming each repository's branch, and the wording in
-  LIFECYCLE.md, waits for Fred's word.
-- **The tamlinux layout.** tamlinux keeps its code in `commands/` and
-  `desktop/`, not `src/`, and has no `tests/` folder at the top. The
-  standard either allows that layout or tamlinux moves to it.
-- **Blame and provenance.** "Blame" replaces "provenance" as the word
-  for which AI did what. Every repository's `AI_PROVENANCE.md` becomes
-  `AI-BLAME.md` as it is brought up to standard. tamlinux's
-  `docs/ai-provenance-standard.md` and the tools and guides around it
-  still say "provenance"; renaming them waits for Fred's word.
+Fred decided these on 2026-11-18. None of the work is done yet; each is
+its own session.
+
+- **Branch names.** `develop` is renamed to `dev` in every repository
+  that has it: libtam, tam, tamlinux, tamlinux-packages and
+  tamlinux-tools. LIFECYCLE.md, the agent guides and routing, and every
+  tool and test that names the branch change with it. `test` and `main`
+  keep their names and rules.
+- **The tamlinux layout.** tamlinux is re-examined, completely cleaned
+  up and reorganized, and then follows the standard; the standard makes
+  no exception for its present layout. The work starts with a survey and
+  a plan for Fred's review, before anything moves.
+- **Blame, everywhere.** "Blame" replaces "provenance" in every file
+  name, document, tool, skill, guide and record that uses it. Every
+  `AI_PROVENANCE.md` becomes `AI-BLAME.md`; tamlinux's
+  `docs/ai-provenance-standard.md` and the tools around it are renamed,
+  with links changed in the same commit. Ask Fred before rewriting dated
+  historical records.
+
+## Still to settle
+
 - **Existing records.** tam-edit's `reviews/review-001.md` becomes
   `R1-...`; tamlinux's `docs/reviews/` moves to `reviews/`; tamlinux's
   `bugs/0001-...` records become `B1-...`; tam-data's upper-case plan
   names become lower case; `bugs/_template.md` files give way to the
   template in `README-bugs`. Each rename keeps the record's text.
+- **tam-edit's branch.** tam-edit works on `c11` and has no `develop`;
+  whether it moves to `dev` is Fred's call.

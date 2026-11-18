@@ -26,6 +26,13 @@ GUIDANCE
   rather than provenance is the new term for tracking which AI did
   what."
 
+  Fred, deciding the open points and leaving the work for later
+  sessions: "Write up these decisions, note them in tam-idol's WHATNOW,
+  but do not do that work. I'm leaving it for another session.
+  1) Rename develop branch to dev in all repos. 2) tamlinux should be
+  re-examined, completely cleaned up, and re-organized. 3) provenance
+  should be changed to blame everywhere"
+
 
 DONE
 
@@ -46,6 +53,8 @@ DONE
     their gaps (summed up in ROADMAP.md).
   - tools/pull-references copied from tam-pane.
   - tam-mail brought up to standard (its own W1).
+  - Fred's three decisions written into ROADMAP.md, plans/P1-standard.md
+    and WHATNOW (NEXT items 2 to 4); none of that work started.
 
 
 FAILED
@@ -55,5 +64,6 @@ FAILED
 
 HANDOFF
 
-  - Bring tam-clam up to standard, then the rest in ROADMAP.md's order.
-    Details in work/WHATNOW.
+  - Bring tam-clam up to standard; rename develop to dev; blame
+    everywhere; survey and plan the tamlinux reorganization. One per
+    session. Details in work/WHATNOW.
