@@ -1,0 +1,37 @@
+W6 RECORD TAM-DATA COMPLIANCE
+
+Date: 2026-11-19
+AI harness: opencode 2.2.5
+AI model: big-pickle
+Commits: the commit that adds this record
+
+
+GUIDANCE
+
+  Fred: "Take the next slice of tam-idol work."
+  Fred: "Go ahead and rename plans lowercase. Your plan is approved.
+  Make it so."
+
+
+DONE
+
+  - Confirmed work/WHATNOW was current (Updated: 2026-11-19, with W5).
+  - Brought tam-data up to the tam-idol 0.1.0 standard (its own W2):
+    renamed AI_PROVENANCE.md to AI-BLAME.md while keeping the dated
+    attribution record, added the version line and WHERE THINGS ARE to
+    README, added UPSTREAM.md (no code taken) and reviews/README-reviews,
+    made the five folder READMEs standard, and renamed the four plans
+    to lower case with links fixed.
+  - tools/idol-check ../tam-data passes.
+  - Recorded tam-data in plans/P1-standard.md and revised work/WHATNOW.
+
+
+FAILED
+
+  - Nothing.
+
+
+HANDOFF
+
+  - Continue NEXT in work/WHATNOW: tam-ring is next for the standard,
+    plus the three decided items (dev branch, blame, tamlinux plan).

@@ -3,7 +3,7 @@ WHATNOW
 What tam-idol is doing now and what comes next. Read this first; revise
 it at the end of every session (work/README-work).
 
-Updated: 2026-11-19, with W5
+Updated: 2026-11-19, with W6
 
 
 STATE
@@ -13,9 +13,9 @@ STATE
   tools/idol-check checks, and each README-<folder> the text that every
   repository copies above its IN THIS REPOSITORY section.
 
-  tam-mail (W1), tam-file (W2), tam-clam (W3), tam-pane (W4) and
-  tam-last (W5) follow the standard. Every other repository still has
-  gaps; ROADMAP.md lists the ones they share.
+  tam-mail (W1), tam-file (W2), tam-clam (W3), tam-pane (W4),
+  tam-last (W5) and tam-data (W6) follow the standard. Every other
+  repository still has gaps; ROADMAP.md lists the ones they share.
 
 
 NEXT
@@ -24,12 +24,12 @@ NEXT
   sessions (ROADMAP.md, "Decided, waiting for a session"). None is
   started. Take one per session.
 
-  1. Bring tam-data up to standard, following plans/P1-standard.md:
-     run tools/idol-check ../tam-data, rename AI_PROVENANCE.md to
-     AI-BLAME.md, make each README-<folder> standard with tam-data's own
+  1. Bring tam-ring up to standard, following plans/P1-standard.md:
+     run tools/idol-check ../tam-ring, rename AI_PROVENANCE.md to
+     AI-BLAME.md, make each README-<folder> standard with tam-ring's own
      text under IN THIS REPOSITORY, add what is missing, write its W
      record and revise its WHATNOW. Done when idol-check passes. Claim
-     only those paths; other sessions may be working in tam-data. Then
+     only those paths; other sessions may be working in tam-ring. Then
      continue in ROADMAP.md's order, skipping repositories already done.
   2. Rename develop to dev in libtam, tam, tamlinux, tamlinux-packages
      and tamlinux-tools. First check each repository's GitHub default
