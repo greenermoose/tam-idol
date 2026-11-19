@@ -1,0 +1,34 @@
+W5 RECORD TAM-LAST COMPLIANCE
+
+Date: 2026-11-19
+AI harness: opencode 2.2.5
+AI model: big-pickle
+Commits: the commit that adds this record
+
+
+GUIDANCE
+
+  Fred: "Plan the next work slic, the tam-last terminal."
+  Fred: "make it so"
+
+
+DONE
+
+  - Confirmed work/WHATNOW was current (Updated: 2026-11-19, with W4).
+  - Brought tam-last up to the tam-idol 0.1.0 standard (its own W5):
+    renamed AI_PROVENANCE.md to AI-BLAME.md, added reviews/ and the
+    README line, and made the five folder READMEs standard with
+    tam-last's own notes and the B1 index under IN THIS REPOSITORY.
+  - tools/idol-check ../tam-last passes.
+  - Recorded tam-last in plans/P1-standard.md and revised work/WHATNOW.
+
+
+FAILED
+
+  - Nothing.
+
+
+HANDOFF
+
+  - Continue NEXT in work/WHATNOW: tam-data is next for the standard,
+    plus the three decided items (dev branch, blame, tamlinux plan).

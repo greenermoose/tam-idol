@@ -71,3 +71,4 @@ further change for it.
 - tam-file: 2026-11-18 (tam-idol 0.1.0).
 - tam-clam: 2026-11-18 (tam-idol 0.1.0).
 - tam-pane: 2026-11-19 (tam-idol 0.1.0).
+- tam-last: 2026-11-19 (tam-idol 0.1.0).
