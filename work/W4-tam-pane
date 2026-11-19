@@ -1,0 +1,33 @@
+W4 RECORD TAM-PANE COMPLIANCE
+
+Date: 2026-11-19
+AI harness: opencode 2.2.5
+AI model: big-pickle
+Commits: the commit that adds this record
+
+
+GUIDANCE
+
+  Fred: "Take the next work slice of tam-idol."
+
+
+DONE
+
+  - Confirmed work/WHATNOW was current (Updated: 2026-11-18, with W3).
+  - Brought tam-pane up to the tam-idol 0.1.0 standard (its own W8):
+    renamed AI_PROVENANCE.md to AI-BLAME.md, added reviews/ and the
+    README line, and made the five folder READMEs standard with
+    tam-pane's own notes under IN THIS REPOSITORY.
+  - tools/idol-check ../tam-pane passes.
+  - Recorded tam-pane in plans/P1-standard.md and revised work/WHATNOW.
+
+
+FAILED
+
+  - Nothing.
+
+
+HANDOFF
+
+  - Continue NEXT in work/WHATNOW: tam-last is next for the standard,
+    plus the three decided items (dev branch, blame, tamlinux plan).
