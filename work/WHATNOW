@@ -3,7 +3,7 @@ WHATNOW
 What tam-idol is doing now and what comes next. Read this first; revise
 it at the end of every session (work/README-work).
 
-Updated: 2026-11-19, with W6
+Updated: 2026-11-20, with W7
 
 
 STATE
@@ -13,6 +13,10 @@ STATE
   tools/idol-check checks, and each README-<folder> the text that every
   repository copies above its IN THIS REPOSITORY section.
 
+  D272's branch rename is done in libtam, tam, tamlinux,
+  tamlinux-packages and tamlinux-tools (W7). They work on dev; test and
+  main are unchanged. The standard's version is still 0.1.0.
+
   tam-mail (W1), tam-file (W2), tam-clam (W3), tam-pane (W4),
   tam-last (W5) and tam-data (W6) follow the standard. Every other
   repository still has gaps; ROADMAP.md lists the ones they share.
@@ -21,8 +25,8 @@ STATE
 NEXT
 
   Fred decided three things on 2026-11-18 and left the work for later
-  sessions (ROADMAP.md, "Decided, waiting for a session"). None is
-  started. Take one per session.
+  sessions (ROADMAP.md). One, the branch rename, is done (W7). Take
+  one of the rest per session.
 
   1. Bring tam-ring up to standard, following plans/P1-standard.md:
      run tools/idol-check ../tam-ring, rename AI_PROVENANCE.md to
@@ -31,16 +35,7 @@ NEXT
      record and revise its WHATNOW. Done when idol-check passes. Claim
      only those paths; other sessions may be working in tam-ring. Then
      continue in ROADMAP.md's order, skipping repositories already done.
-  2. Rename develop to dev in libtam, tam, tamlinux, tamlinux-packages
-     and tamlinux-tools. First check each repository's GitHub default
-     branch and open pull requests, and grep for every use of develop
-     as a branch name: LIFECYCLE.md, the agent guides and routing,
-     tamlinux-packages' tests and candidate preparation, fred-stage and
-     tam-deploy. Rename the branch locally and on GitHub, change the
-     references in the same sitting, and leave test and main alone.
-     Done when no repository has a develop branch and idol-check stops
-     reporting "has no dev branch" for them.
-  3. Blame everywhere: rename every AI_PROVENANCE.md to AI-BLAME.md,
+  2. Blame everywhere: rename every AI_PROVENANCE.md to AI-BLAME.md,
      and rename "provenance" in tamlinux's
      docs/ai-provenance-standard.md, the ai-provenance skill, the agent
      guides, routing and memories, and the private ledger. Change each
@@ -48,11 +43,11 @@ NEXT
      link in tam-idol's AI-BLAME.md. Ask Fred before rewriting dated
      historical records. Changes reach tamlinux's main only on Fred's
      word.
-  4. Re-examine tamlinux: survey what it holds and write a plan for
+  3. Re-examine tamlinux: survey what it holds and write a plan for
      Fred's review (what stays, moves or goes; how packaging, tests and
      deployment keep working; how it ends up following the standard).
      Move or delete nothing until Fred has approved the plan.
-  5. When a repository shows the standard is wrong or missing
+  4. When a repository shows the standard is wrong or missing
      something, change tam-idol first, bump VERSION, and say why in
      ROADMAP.md.
 

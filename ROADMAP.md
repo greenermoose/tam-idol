@@ -46,16 +46,19 @@ Beyond those, `tools/idol-check <repository>` gives the full list.
 Every repository passes `tools/idol-check`, and a new repository starts
 from tam-idol.
 
+## Done since 0.1.0
+
+- **Branch names (D272).** `develop` was renamed to `dev` in libtam,
+  tam, tamlinux, tamlinux-packages and tamlinux-tools on 2026-11-20.
+  LIFECYCLE.md, agent routing, candidate preparation, tools and tests
+  name `dev`; `test` and `main` kept their names and rules. The version
+  of the standard did not change.
+
 ## Decided, waiting for a session
 
-Fred decided these on 2026-11-18. None of the work is done yet; each is
-its own session.
+Fred decided these on 2026-11-18. The work below has not started; each
+is its own session.
 
-- **Branch names.** `develop` is renamed to `dev` in every repository
-  that has it: libtam, tam, tamlinux, tamlinux-packages and
-  tamlinux-tools. LIFECYCLE.md, the agent guides and routing, and every
-  tool and test that names the branch change with it. `test` and `main`
-  keep their names and rules.
 - **The tamlinux layout.** tamlinux is re-examined, completely cleaned
   up and reorganized, and then follows the standard; the standard makes
   no exception for its present layout. The work starts with a survey and

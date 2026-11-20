@@ -1,0 +1,48 @@
+W7 DEV BRANCH RENAME
+
+Date: 2026-11-20
+AI harness: opencode 2.2.5
+AI model: big-pickle
+Commits: the branch-reference commits in the five repositories and this
+         record's commit
+
+
+GUIDANCE
+
+  Fred: "Okay, I accept your recommendation for the develop/2.0.0 and
+  plan54 stuff. Plan approved. Proceed"
+
+  D272 renames the working branch to dev. The two hierarchical names,
+  fred.<id>/develop/2.0.0 and the external develop/plan54-* branches,
+  were left alone at Fred's acceptance.
+
+
+DONE
+
+  - Renamed develop to dev locally and on GitHub in libtam, tam,
+    tamlinux-tools, tamlinux and tamlinux-packages. Each remote's
+    old branch was removed by GitHub's rename endpoint.
+  - Updated tam's developer loop, repository check, staged branch map,
+    upgrade tool, routing, plans and corpus links; make check passed.
+  - Updated tamlinux-packages' candidate workflow to check, fetch and
+    publish dev; 196 tests pass. One stale tam-bundle test fails at
+    HEAD because tools/bundle-delivery.py was retired; the same failure
+    was reproduced from a clean export of HEAD.
+  - Updated config guidance, lifecycle policy and procedures to name
+    dev. Config's make check and fleet-sync tests passed.
+  - ROADMAP.md moves the branch item to a done section. WHATNOW has no
+    branch-rename item. VERSION stays 0.1.0: the standard did not
+    change.
+
+
+FAILED
+
+  - Nothing.
+
+
+HANDOFF
+
+  - The branch rename is complete on bosgame. Clones on slowhp and
+    toughbook are updated in their own sessions.
+  - The docs/ai retirement and blame rename remain in ROADMAP.md.
+  - No stage, version or source pin changed.
