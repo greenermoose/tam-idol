@@ -1,0 +1,43 @@
+W12 RECORD TAM COMPLIANCE
+
+Date: 2026-11-20
+AI harness: agy 1.5.13
+AI model: Gemini 4 Neon (Medium)
+Commits: the commit that adds this record
+
+
+GUIDANCE
+
+  Fred: "/plan Take the next work slice for tam-idol, if there is one."
+  Fred: "Approved. Proceed."
+
+
+DONE
+
+  - Brought tam up to the tam-idol 0.2.0 standard (its own W34):
+    added VERSION (0.67.3, matching TAM_COMMAND_VERSION), UPSTREAM.md
+    (recording tldr-pages under knowledge/tldr/pages/), and expanded
+    COPYRIGHT with the tldr-pages CC-BY-4.0 notice; renamed
+    AI_PROVENANCE.md to AI-BLAME.md (preserving its pre-2026-11-17
+    ledger) and repaired links in README, AGENTS.md, docs/repo-map.md
+    and work/history/README; added the tam-idol 0.2.0 line to README;
+    made all six README-<folder> files standard with tam's notes under
+    IN THIS REPOSITORY; removed bugs/README-bugs.md and
+    bugs/_template.md; updated docs/repo-map.md and revised tam's
+    work/WHATNOW.
+  - tools/idol-check ../tam passes at 0.2.0, and tam's
+    tools/check-repo.py passes.
+  - Recorded tam in plans/P1-standard.md and revised work/WHATNOW to
+    point NEXT item 1 at tamlinux-tools.
+
+
+FAILED
+
+  - Nothing.
+
+
+HANDOFF
+
+  - Continue NEXT in work/WHATNOW: tamlinux-tools is next for the 0.2.0
+    standard (then tamlinux), followed by blame everywhere and the
+    tamlinux survey/plan.
