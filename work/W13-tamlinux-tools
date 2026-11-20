@@ -1,0 +1,42 @@
+W13 RECORD TAMLINUX-TOOLS COMPLIANCE
+
+Date: 2026-11-20
+AI harness: agy 1.5.13
+AI model: Gemini 4 Neon (Medium)
+Commits: the commit that adds this record
+
+
+GUIDANCE
+
+  Fred: "/plan Take the next work slice for tam-idol, if there is one."
+  Fred: "Approved. Proceed."
+
+
+DONE
+
+  - Brought tamlinux-tools up to the tam-idol 0.2.0 standard (its own
+    W4): added VERSION (0.1.0), ROADMAP.md, and expanded COPYRIGHT;
+    renamed AI_PROVENANCE.md to AI-BLAME.md (preserving its
+    pre-2026-11-17 ledger); added the tam-idol 0.2.0 line and WHERE
+    THINGS ARE to README and updated its bugs link; made all six
+    README-<folder> files standard with tamlinux-tools's notes under IN
+    THIS REPOSITORY; removed legacy bugs/README-bugs.md and
+    bugs/_template.md; revised tamlinux-tools's work/WHATNOW for 0.2.0
+    compliance and the earlier retirement of tam-bundle.
+  - tools/idol-check ../tamlinux-tools passes at 0.2.0, and
+    tamlinux-tools's make test passes.
+  - Recorded tamlinux-tools in plans/P1-standard.md and revised
+    work/WHATNOW to note that tamlinux is the last remaining repository
+    (waiting on NEXT item 3's survey and approved plan).
+
+
+FAILED
+
+  - Nothing.
+
+
+HANDOFF
+
+  - Continue NEXT in work/WHATNOW: blame everywhere (item 2) or the
+    tamlinux survey and reorganization plan (item 3), after which
+    tamlinux can be brought up to the 0.2.0 standard (item 1).
