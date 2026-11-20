@@ -60,7 +60,7 @@ Beyond those, `tools/idol-check <repository>` gives the full list.
 ## 1.0.0: every repository follows the standard
 
 Every repository passes `tools/idol-check`, and a new repository starts
-from tam-idol.
+from tam-idol. Done and tagged 2026-11-20 (W14).
 
 ## Done since 0.1.0
 
