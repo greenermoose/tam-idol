@@ -3,19 +3,22 @@ WHATNOW
 What tam-idol is doing now and what comes next. Read this first; revise
 it at the end of every session (work/README-work).
 
-Updated: 2026-11-20, with W7
+Updated: 2026-11-20, with W8
 
 
 STATE
 
-  Version 0.1.0 on branch dev. The standard is written down: README has
+  Version 0.2.0 on branch dev. The standard is written down: README has
   the standard set and the procedures, arch/layout.md the list that
   tools/idol-check checks, and each README-<folder> the text that every
   repository copies above its IN THIS REPOSITORY section.
 
   D272's branch rename is done in libtam, tam, tamlinux,
   tamlinux-packages and tamlinux-tools (W7). They work on dev; test and
-  main are unchanged. The standard's version is still 0.1.0.
+  main are unchanged.
+
+  D278 ended docs/ai/. The standard is 0.2.0: old records go in
+  work/history/ and idol-check flags any live docs/ai folder (W8).
 
   tam-mail (W1), tam-file (W2), tam-clam (W3), tam-pane (W4),
   tam-last (W5) and tam-data (W6) follow the standard. Every other
@@ -24,18 +27,23 @@ STATE
 
 NEXT
 
-  Fred decided three things on 2026-11-18 and left the work for later
-  sessions (ROADMAP.md). One, the branch rename, is done (W7). Take
-  one of the rest per session.
+  Fred left several items for later sessions (ROADMAP.md). The branch
+  rename is done (W7); take one of the rest per session.
 
-  1. Bring tam-ring up to standard, following plans/P1-standard.md:
+  1. Roll out D278: move each live repository's docs/ai/ records into
+     work/history/ (or a W record where it is really a session), repair
+     links and private-ledger rows in the same commit, and delete the
+     old folder. Start with tam, then tamlinux-packages, config,
+     ecosystem, tamlinux and its plugins. Done when no live source
+     tree has docs/ai/ and idol-check passes on standard followers.
+  2. Bring tam-ring up to standard, following plans/P1-standard.md:
      run tools/idol-check ../tam-ring, rename AI_PROVENANCE.md to
      AI-BLAME.md, make each README-<folder> standard with tam-ring's own
      text under IN THIS REPOSITORY, add what is missing, write its W
      record and revise its WHATNOW. Done when idol-check passes. Claim
      only those paths; other sessions may be working in tam-ring. Then
      continue in ROADMAP.md's order, skipping repositories already done.
-  2. Blame everywhere: rename every AI_PROVENANCE.md to AI-BLAME.md,
+  3. Blame everywhere: rename every AI_PROVENANCE.md to AI-BLAME.md,
      and rename "provenance" in tamlinux's
      docs/ai-provenance-standard.md, the ai-provenance skill, the agent
      guides, routing and memories, and the private ledger. Change each
@@ -43,11 +51,11 @@ NEXT
      link in tam-idol's AI-BLAME.md. Ask Fred before rewriting dated
      historical records. Changes reach tamlinux's main only on Fred's
      word.
-  3. Re-examine tamlinux: survey what it holds and write a plan for
+  4. Re-examine tamlinux: survey what it holds and write a plan for
      Fred's review (what stays, moves or goes; how packaging, tests and
      deployment keep working; how it ends up following the standard).
      Move or delete nothing until Fred has approved the plan.
-  4. When a repository shows the standard is wrong or missing
+  5. When a repository shows the standard is wrong or missing
      something, change tam-idol first, bump VERSION, and say why in
      ROADMAP.md.
 

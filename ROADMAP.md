@@ -5,6 +5,15 @@ to the standard or changes it; a patch version fixes wording or
 `tools/idol-check` without changing what a repository must have.
 `plans/P1-standard.md` has the work items.
 
+## 0.2.0: work history lives under work/
+
+There is no `docs/ai/` folder. Records from before the 2026-11-17
+cutover live in `work/history/`, read-only and not indexed; new
+sessions write `work/W<n>-<name>`. `tools/idol-check` reports a
+`docs/ai/` directory as a gap. Done 2026-11-20 under D278;
+repositories following the standard update their README and
+`work/README-work` with the rollout.
+
 ## 0.1.0: the standard is written down
 
 The standard set, the `README-<folder>` text for arch, bugs, ideas,

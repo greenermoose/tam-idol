@@ -19,6 +19,7 @@ if [ "${1:-}" = --list ]; then
 	for f in $files; do echo "  $f"; done
 	for d in $folders; do echo "  $d/README-$d"; done
 	echo "  work/WHATNOW"
+	echo "  no docs/ai directory; old records in work/history"
 	echo "  with reference clones: ideas/sources, tools/pull-references"
 	echo "  with code: Makefile, src/, tests/"
 	echo "  branch: dev"
@@ -60,6 +61,7 @@ for repo in "$@"; do
 		fi
 	done
 	[ -f "$repo/work/WHATNOW" ] || gap "missing work/WHATNOW"
+	[ ! -d "$repo/docs/ai" ] || gap "has a docs/ai directory"
 
 	# Records: B<n>-<name>.md, P<n>-<name>.md, R<n>-<name>.md, W<n>-<name>.
 	for pair in bugs:B:.md plans:P:.md reviews:R:.md work:W:; do

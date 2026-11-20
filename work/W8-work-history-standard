@@ -1,0 +1,39 @@
+W8 WORK HISTORY STANDARD
+
+Date: 2026-11-20
+AI harness: opencode 2.2.5
+AI model: big-pickle
+Commits: the standard and VERSION bump commit
+
+
+GUIDANCE
+
+  Fred: "all docs/ai files should be rewritten into work/ files. i don't
+  want there to be a docs/ai/ folder any more -- I'm looking in work/
+  to see work history"
+
+  D278 records the decision. D265's trial succeeded.
+
+
+DONE
+
+  - VERSION is 0.2.0. The README, arch/layout.md, work/README-work
+    and ROADMAP.md say that work history lives under work/, old records
+    live in work/history/, and no live repository has docs/ai/.
+  - tools/idol-check now reports "has a docs/ai directory" as a gap and
+    lists the rule with --list. The checker's copy of the standard set
+    and arch/layout.md were changed together.
+  - WHATNOW puts the D278 rollout first in NEXT. Repositories following
+    0.1.0 must update their README and work/README-work with the move.
+
+
+FAILED
+
+  - Nothing.
+
+
+HANDOFF
+
+  - Move each repository's docs/ai records under work/ with links fixed,
+    one repository per session, starting with tam.
+  - No Test, Run or Release action was taken.

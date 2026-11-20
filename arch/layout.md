@@ -23,6 +23,9 @@ of these lists; change both in the same commit.
     work/README-work
     work/WHATNOW
 
+No repository has a docs/ai/ folder. Records written before the
+work/ cutover live in work/history/, read-only and not indexed.
+
 ## Required where the repository keeps reference clones
 
     ideas/sources            one clone per line
@@ -43,6 +46,8 @@ of these lists; change both in the same commit.
     plans/P<n>-<name>.md     one work phase
     reviews/R<n>-<name>.md   one review
     work/W<n>-<name>         one work session (plain text)
+    work/history/            records from before the cutover,
+                             read-only; links may be repaired
 
 ## Branches
 

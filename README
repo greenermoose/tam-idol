@@ -10,7 +10,7 @@ tam-idol has no program in it. Its version (VERSION) is the version of
 the standard, and each repository's README says which version it
 follows, for example:
 
-  Follows the tam-idol 0.1.0 standard.
+  Follows the tam-idol 0.2.0 standard.
 
 tools/idol-check reports what a repository is missing.
 
@@ -35,8 +35,8 @@ THE STANDARD SET
   ideas/            ideas from other projects, one file per project
   plans/            one plan per work phase: P1, P2, ...
   reviews/          one record per review: R1, R2, ...
-  work/             WHATNOW, and one record per work session: W1, W2,
-                    ...
+  work/             WHATNOW, one record per work session W1, W2, ...,
+                    and history/ for records from before the cutover
 
   Every folder has a README-<folder> (README-arch, README-bugs, ...)
   that says what goes in it and how. The text above its IN THIS
