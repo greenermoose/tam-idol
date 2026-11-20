@@ -5,6 +5,13 @@ to the standard or changes it; a patch version fixes wording or
 `tools/idol-check` without changing what a repository must have.
 `plans/P1-standard.md` has the work items.
 
+## 0.2.1: allow `work/ai-blame-standard.md`
+
+Patch update to `tools/idol-check` and `arch/layout.md` so `tamlinux`
+can host the public AI blame standard at `work/ai-blame-standard.md`
+(work-session paperwork rather than code architecture). No other
+repository needs to change. Done 2026-11-20 (W14).
+
 ## 0.2.0: work history lives under work/
 
 There is no `docs/ai/` folder. Records from before the 2026-11-17
@@ -62,22 +69,17 @@ from tam-idol.
   LIFECYCLE.md, agent routing, candidate preparation, tools and tests
   name `dev`; `test` and `main` kept their names and rules. The version
   of the standard did not change.
-
-## Decided, waiting for a session
-
-Fred decided these on 2026-11-18. The work below has not started; each
-is its own session.
-
-- **The tamlinux layout.** tamlinux is re-examined, completely cleaned
-  up and reorganized, and then follows the standard; the standard makes
-  no exception for its present layout. The work starts with a survey and
-  a plan for Fred's review, before anything moves.
-- **Blame, everywhere.** "Blame" replaces "provenance" in every file
-  name, document, tool, skill, guide and record that uses it. Every
-  `AI_PROVENANCE.md` becomes `AI-BLAME.md`; tamlinux's
-  `docs/ai-provenance-standard.md` and the tools around it are renamed,
-  with links changed in the same commit. Ask Fred before rewriting dated
-  historical records.
+- **The tamlinux layout.** Re-examined, reorganized into `src/`,
+  `tests/`, `arch/`, `bugs/`, `ideas/`, `plans/`, `reviews/`, and
+  `work/`, and brought up to the `tam-idol` 0.2.1 standard on branch
+  `dev` (W14, 2026-11-20).
+- **Blame, everywhere.** Renamed every remaining `AI_PROVENANCE.md` to
+  `AI-BLAME.md` (including the 8 in-repo `fred.*` plugins), moved the
+  public standard to `tamlinux/work/ai-blame-standard.md`, renamed the
+  `ai-blame` skill, guides, routing, memories, and private `blame/`
+  ledger, and repointed `AI-BLAME.md` links across all free repos
+  (`tam/AI-BLAME.md` queued for Codex while its exclusive claim holds).
+  Dated historical records were left untouched (W14, 2026-11-20).
 
 ## Still to settle
 

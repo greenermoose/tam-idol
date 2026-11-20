@@ -46,6 +46,8 @@ work/ cutover live in work/history/, read-only and not indexed.
     plans/P<n>-<name>.md     one work phase
     reviews/R<n>-<name>.md   one review
     work/W<n>-<name>         one work session (plain text)
+    work/ai-blame-standard.md optional; the public AI blame standard
+                             (hosted in tamlinux)
     work/history/            records from before the cutover,
                              read-only; links may be repaired
 

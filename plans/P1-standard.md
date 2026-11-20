@@ -1,6 +1,6 @@
 # P1: the standard, and every repository following it
 
-- **Status:** in progress, 0.1.0 (2026-11-18)
+- **Status:** complete (2026-11-20)
 - **Versions:** 0.1.0 to 1.0.0
 
 ## Goal
@@ -80,3 +80,4 @@ further change for it.
 - libtam: 2026-11-20 (tam-idol 0.2.0).
 - tam: 2026-11-20 (tam-idol 0.2.0).
 - tamlinux-tools: 2026-11-20 (tam-idol 0.2.0).
+- tamlinux: 2026-11-20 (tam-idol 0.2.1).

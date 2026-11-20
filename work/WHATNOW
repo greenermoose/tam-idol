@@ -3,63 +3,45 @@ WHATNOW
 What tam-idol is doing now and what comes next. Read this first; revise
 it at the end of every session (work/README-work).
 
-Updated: 2026-11-20, with W13
+Updated: 2026-11-20, with W14
 
 
 STATE
 
-  Version 0.2.0 on branch dev. The standard is written down: README has
+  Version 0.2.1 on branch dev. The standard is written down: README has
   the standard set and the procedures, arch/layout.md the list that
   tools/idol-check checks, and each README-<folder> the text that every
   repository copies above its IN THIS REPOSITORY section.
 
-  D272's branch rename is done in libtam, tam, tamlinux,
-  tamlinux-packages and tamlinux-tools (W7). They work on dev; test and
-  main are unchanged.
+  0.2.1 (W14) added an allowance in tools/idol-check and arch/layout.md
+  for work/ai-blame-standard.md so tamlinux can host the public AI blame
+  standard under work/.
 
-  D278's docs/ai/ rollout is complete: no live source tree has docs/ai/
-  and old records live in work/history/ (standard 0.2.0, W8).
+  Every Tamlinux repository now passes tools/idol-check: tam-mail (W1),
+  tam-file (W2), tam-clam (W3), tam-pane (W4), tam-last (W5), tam-data
+  (W6), tam-view, tam-bud, tam-ring (W9), tam-edit (W10), libtam (W11),
+  tam (W12), tamlinux-tools (W13), and tamlinux (W14).
 
-  tam-mail (W1), tam-file (W2), tam-clam (W3), tam-pane (W4),
-  tam-last (W5), tam-data (W6), tam-view, tam-bud, tam-ring (W9),
-  tam-edit (W10), libtam (W11), tam (W12) and tamlinux-tools (W13)
-  follow the 0.2.0 standard. Only tamlinux still has gaps; ROADMAP.md
-  lists what remains.
+  D272's branch rename (W7), D278's docs/ai/ retirement (W8), "Blame
+  everywhere" (W14), and the tamlinux survey and reorganization (W14)
+  are all complete on dev.
 
 
 NEXT
 
-  Fred left several items for later sessions (ROADMAP.md). Take one per
-  session.
-
-  1. Bring tamlinux up to standard, following plans/P1-standard.md,
-     once NEXT item 3's survey and reorganization plan are approved by
-     Fred: run tools/idol-check ../tamlinux, add what is missing, rename
-     AI_PROVENANCE.md to AI-BLAME.md, make each README-<folder> standard
-     with tamlinux's own text under IN THIS REPOSITORY, add the version
-     line to README, write its W record and revise its WHATNOW. Done
-     when idol-check passes. Claim only those paths; other sessions may
-     be working in tamlinux.
-  2. Blame everywhere: rename every AI_PROVENANCE.md to AI-BLAME.md,
-     and rename "provenance" in tamlinux's
-     docs/ai-provenance-standard.md, the ai-provenance skill, the agent
-     guides, routing and memories, and the private ledger. Change each
-     link in the same commit as the file it points to, then update the
-     link in tam-idol's AI-BLAME.md. Ask Fred before rewriting dated
-     historical records. Changes reach tamlinux's main only on Fred's
-     word.
-  3. Re-examine tamlinux: survey what it holds and write a plan for
-     Fred's review (what stays, moves or goes; how packaging, tests and
-     deployment keep working; how it ends up following the standard).
-     Move or delete nothing until Fred has approved the plan.
-  4. When a repository shows the standard is wrong or missing
-     something, change tam-idol first, bump VERSION, and say why in
-     ROADMAP.md.
+  1. Follow up on tam/AI-BLAME.md: once Codex releases its exclusive
+     claim on tam (or handles our inbox note), update tam/AI-BLAME.md to
+     point to tamlinux/blob/main/work/ai-blame-standard.md.
+  2. When a repository shows the standard is wrong or missing something,
+     change tam-idol first, bump VERSION, and say why in ROADMAP.md.
+  3. On Fred's word, consider tagging tam-idol 1.0.0 now that every
+     repository passes tools/idol-check.
 
 
 WAITING FOR FRED
 
-  - Approval of the tamlinux plan, once NEXT item 3 has written it.
+  - Word on whether to tag tam-idol 1.0.0 and when to advance dev to
+    main in tamlinux and the other public repositories.
 
 
 WATCH OUT

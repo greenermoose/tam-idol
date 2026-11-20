@@ -1,0 +1,58 @@
+W14 BLAME EVERYWHERE AND TAMLINUX 0.2.1 COMPLIANCE
+
+Date: 2026-11-20
+AI harness: agy 1.5.13
+AI model: Gemini 4 Neon (Medium)
+Commits: the commit that adds this record
+
+
+GUIDANCE
+
+  Fred: "/plan Complete the remaining items in tam-idol/work/WHATNOW,
+  'Blame everywhere' (item 2) and the tamlinux survey/reorganization
+  plan (item 3). Then bring tamlinux up to version 0.2.0 of the idol
+  standard."
+  Fred: "2 move it to tamlinux/work/ai-blame-standard.md ... 3 yes,
+  rename all to AI-BLAME.md ... 4 yes, migrate plans from docs/plans/
+  to plans/ ... 5 yes, skip tam if you can't work on it. But ask codex
+  if you can just do the one file rename you want to do."
+  Fred: "Approved. Proceed."
+
+
+DONE
+
+  - Bumped tam-idol to 0.2.1: updated tools/idol-check and
+    arch/layout.md in the same commit to allow work/ai-blame-standard.md
+    (hosted in tamlinux), and updated tam-idol/AI-BLAME.md to point to
+    tamlinux/work/ai-blame-standard.md.
+  - Completed "Blame everywhere" across the ecosystem: renamed every
+    remaining AI_PROVENANCE.md to AI-BLAME.md (tamlinux root + 8 fred.*
+    plugins, ecosystem-fred-tamlinux, tamlinux-packages, and
+    workstation config), moved tamlinux/docs/ai-provenance-standard.md
+    to tamlinux/work/ai-blame-standard.md, renamed the ai-blame skill,
+    guides, routing, memories, and private blame/ ledger, and repointed
+    AI-BLAME.md links in libtam, tam-bud, tam-clam, tam-data, tam-edit,
+    tam-file, tam-hide, tam-last, tam-mail, tam-pane, tam-ring,
+    tam-view, and tamlinux-tools. Left dated historical records
+    untouched. Left an inbox note for Codex to update tam/AI-BLAME.md
+    once its exclusive claim on tam clears.
+  - Reorganized tamlinux and brought it up to the tam-idol 0.2.1
+    standard (its own W16): src/, tests/, arch/, bugs/, ideas/, plans/,
+    reviews/, work/, ROADMAP.md, and all six standard README-<folder>
+    files.
+  - Verified tools/idol-check passes across all 15 repositories.
+  - Marked tamlinux complete in plans/P1-standard.md and updated
+    ROADMAP.md and work/WHATNOW.
+
+
+FAILED
+
+  - Could not update tam/AI-BLAME.md directly because Codex held an
+    exclusive tam-work claim on tam; sent Codex an inbox request.
+
+
+HANDOFF
+
+  - All 14 Tamlinux repositories now pass tools/idol-check.
+  - Follow up on tam/AI-BLAME.md link once Codex releases its claim on
+    tam, and watch for future standard refinements (WHATNOW NEXT).

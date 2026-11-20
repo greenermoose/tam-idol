@@ -72,6 +72,7 @@ for repo in "$@"; do
 			b=$(basename "$p")
 			case $b in
 			README-*|WHATNOW|sources) continue ;;
+			ai-blame-standard.md) [ "$d" = work ] && continue ;;
 			esac
 			if ! echo "$b" | grep -Eq "^$letter[0-9]+-[a-z0-9.-]+$ext\$"; then
 				gap "$d/$b is not named $letter<n>-<name>$ext"
