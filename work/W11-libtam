@@ -1,0 +1,40 @@
+W11 RECORD LIBTAM COMPLIANCE
+
+Date: 2026-11-20
+AI harness: agy 1.5.13
+AI model: Gemini 4 Neon (Medium)
+Commits: the commit that adds this record
+
+
+GUIDANCE
+
+  Fred: "/plan Take the next work slice for tam-idol, if there is one."
+  Fred: "Approved. Proceed."
+
+
+DONE
+
+  - Brought libtam up to the tam-idol 0.2.0 standard (its own W3):
+    added ROADMAP.md and UPSTREAM.md (no third-party code taken) and
+    expanded COPYRIGHT; renamed AI_PROVENANCE.md to AI-BLAME.md
+    (preserving its pre-2026-11-17 history); added the version line and
+    WHERE THINGS ARE to README and updated its bugs link; made all six
+    README-<folder> files standard with libtam's notes under IN THIS
+    REPOSITORY; removed bugs/README-bugs.md and bugs/_template.md;
+    revised libtam's work/WHATNOW for 0.8.0 and 0.2.0 compliance.
+  - tools/idol-check ../libtam passes at 0.2.0, and libtam's make test
+    passes.
+  - Recorded libtam in plans/P1-standard.md and revised work/WHATNOW to
+    point NEXT item 1 at tam.
+
+
+FAILED
+
+  - Nothing.
+
+
+HANDOFF
+
+  - Continue NEXT in work/WHATNOW: tam is next for the 0.2.0 standard
+    (then tamlinux-tools, tamlinux), followed by blame everywhere and
+    the tamlinux survey/plan.

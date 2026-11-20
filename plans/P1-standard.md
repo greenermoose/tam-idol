@@ -77,3 +77,4 @@ further change for it.
 - tam-bud: 2026-11-20 (tam-idol 0.2.0).
 - tam-ring: 2026-11-20 (tam-idol 0.2.0).
 - tam-edit: 2026-11-20 (tam-idol 0.2.0).
+- libtam: 2026-11-20 (tam-idol 0.2.0).
