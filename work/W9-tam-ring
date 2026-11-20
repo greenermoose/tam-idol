@@ -1,0 +1,41 @@
+W9 RECORD TAM-RING COMPLIANCE
+
+Date: 2026-11-20
+AI harness: agy 1.5.13
+AI model: Gemini 4 Neon (Medium)
+Commits: the commit that adds this record
+
+
+GUIDANCE
+
+  Fred: "/plan Take the next work slice for tam-idol, if there is one."
+  Fred: "Approved. Proceed."
+
+
+DONE
+
+  - Verified the docs/ai/ removal rollout is already complete across
+    all live repositories (no live docs/ai/ directories remain, and all
+    standard followers pass idol-check at 0.2.0, including tam-bud and
+    tam-view).
+  - Brought tam-ring up to the tam-idol 0.2.0 standard (its own W1):
+    added VERSION (0.0.0), UPSTREAM.md, AI-BLAME.md,
+    reviews/README-reviews, work/README-work, and work/WHATNOW; fixed
+    the tam-data typo in COPYRIGHT; added the version line, WHERE
+    THINGS ARE, and LICENSE to README; made the four existing folder
+    READMEs standard with tam-ring's notes under IN THIS REPOSITORY.
+  - tools/idol-check ../tam-ring passes at 0.2.0.
+  - Recorded tam-ring (plus tam-bud and tam-view) in plans/P1-standard.md
+    and revised work/WHATNOW to close out the docs/ai/ rollout and
+    tam-ring and point NEXT at tam-edit.
+
+
+FAILED
+
+  - Nothing.
+
+
+HANDOFF
+
+  - Continue NEXT in work/WHATNOW: tam-edit is next for the 0.2.0
+    standard, followed by blame everywhere and the tamlinux survey/plan.

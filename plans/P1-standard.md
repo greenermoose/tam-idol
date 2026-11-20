@@ -67,9 +67,12 @@ further change for it.
 
 ## Done
 
-- tam-mail: 2026-11-18 (tam-idol 0.1.0).
-- tam-file: 2026-11-18 (tam-idol 0.1.0).
-- tam-clam: 2026-11-18 (tam-idol 0.1.0).
-- tam-pane: 2026-11-19 (tam-idol 0.1.0).
-- tam-last: 2026-11-19 (tam-idol 0.1.0).
-- tam-data: 2026-11-19 (tam-idol 0.1.0).
+- tam-mail: 2026-11-18 (tam-idol 0.1.0; updated to 0.2.0).
+- tam-file: 2026-11-18 (tam-idol 0.1.0; updated to 0.2.0).
+- tam-clam: 2026-11-18 (tam-idol 0.1.0; updated to 0.2.0).
+- tam-pane: 2026-11-19 (tam-idol 0.1.0; updated to 0.2.0).
+- tam-last: 2026-11-19 (tam-idol 0.1.0; updated to 0.2.0).
+- tam-data: 2026-11-19 (tam-idol 0.1.0; updated to 0.2.0).
+- tam-view: 2026-11-20 (tam-idol 0.2.0).
+- tam-bud: 2026-11-20 (tam-idol 0.2.0).
+- tam-ring: 2026-11-20 (tam-idol 0.2.0).

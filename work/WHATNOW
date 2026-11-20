@@ -3,7 +3,7 @@ WHATNOW
 What tam-idol is doing now and what comes next. Read this first; revise
 it at the end of every session (work/README-work).
 
-Updated: 2026-11-20, with W8
+Updated: 2026-11-20, with W9
 
 
 STATE
@@ -17,33 +17,30 @@ STATE
   tamlinux-packages and tamlinux-tools (W7). They work on dev; test and
   main are unchanged.
 
-  D278 ended docs/ai/. The standard is 0.2.0: old records go in
-  work/history/ and idol-check flags any live docs/ai folder (W8).
+  D278's docs/ai/ rollout is complete: no live source tree has docs/ai/
+  and old records live in work/history/ (standard 0.2.0, W8).
 
   tam-mail (W1), tam-file (W2), tam-clam (W3), tam-pane (W4),
-  tam-last (W5) and tam-data (W6) follow the standard. Every other
-  repository still has gaps; ROADMAP.md lists the ones they share.
+  tam-last (W5), tam-data (W6), tam-view, tam-bud and tam-ring (W9)
+  follow the 0.2.0 standard. Every other repository still has gaps;
+  ROADMAP.md lists the ones they share.
 
 
 NEXT
 
-  Fred left several items for later sessions (ROADMAP.md). The branch
-  rename is done (W7); take one of the rest per session.
+  Fred left several items for later sessions (ROADMAP.md). Take one per
+  session.
 
-  1. Roll out D278: move each live repository's docs/ai/ records into
-     work/history/ (or a W record where it is really a session), repair
-     links and private-ledger rows in the same commit, and delete the
-     old folder. Start with tam, then tamlinux-packages, config,
-     ecosystem, tamlinux and its plugins. Done when no live source
-     tree has docs/ai/ and idol-check passes on standard followers.
-  2. Bring tam-ring up to standard, following plans/P1-standard.md:
-     run tools/idol-check ../tam-ring, rename AI_PROVENANCE.md to
-     AI-BLAME.md, make each README-<folder> standard with tam-ring's own
-     text under IN THIS REPOSITORY, add what is missing, write its W
-     record and revise its WHATNOW. Done when idol-check passes. Claim
-     only those paths; other sessions may be working in tam-ring. Then
-     continue in ROADMAP.md's order, skipping repositories already done.
-  3. Blame everywhere: rename every AI_PROVENANCE.md to AI-BLAME.md,
+  1. Bring tam-edit up to standard, following plans/P1-standard.md:
+     run tools/idol-check ../tam-edit, add COPYRIGHT, UPSTREAM.md and
+     AI-BLAME.md, make each README-<folder> standard with tam-edit's own
+     text under IN THIS REPOSITORY, rename reviews/review-001.md to
+     R1-... (fixing any links), add the version line to README, write
+     its W record and revise its WHATNOW. Done when idol-check passes.
+     Claim only those paths; other sessions may be working in tam-edit.
+     Then continue in ROADMAP.md's order (libtam, tam, tamlinux-tools,
+     tamlinux), skipping repositories already done.
+  2. Blame everywhere: rename every AI_PROVENANCE.md to AI-BLAME.md,
      and rename "provenance" in tamlinux's
      docs/ai-provenance-standard.md, the ai-provenance skill, the agent
      guides, routing and memories, and the private ledger. Change each
@@ -51,18 +48,18 @@ NEXT
      link in tam-idol's AI-BLAME.md. Ask Fred before rewriting dated
      historical records. Changes reach tamlinux's main only on Fred's
      word.
-  4. Re-examine tamlinux: survey what it holds and write a plan for
+  3. Re-examine tamlinux: survey what it holds and write a plan for
      Fred's review (what stays, moves or goes; how packaging, tests and
      deployment keep working; how it ends up following the standard).
      Move or delete nothing until Fred has approved the plan.
-  5. When a repository shows the standard is wrong or missing
+  4. When a repository shows the standard is wrong or missing
      something, change tam-idol first, bump VERSION, and say why in
      ROADMAP.md.
 
 
 WAITING FOR FRED
 
-  - Approval of the tamlinux plan, once NEXT item 4 has written it.
+  - Approval of the tamlinux plan, once NEXT item 3 has written it.
 
   tam-edit is settled: it started fresh on 2026-11-18 as a new
   repository on dev, with the old fork archived as tam-edit-micro-fork.
