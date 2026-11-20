@@ -1,0 +1,40 @@
+W10 RECORD TAM-EDIT COMPLIANCE
+
+Date: 2026-11-20
+AI harness: agy 1.5.13
+AI model: Gemini 4 Neon (Medium)
+Commits: the commit that adds this record
+
+
+GUIDANCE
+
+  Fred: "/plan Take the next work slice for tam-idol, if there is one."
+  Fred: "I've read it. Approved. Proceed."
+
+
+DONE
+
+  - Brought tam-edit up to the tam-idol 0.2.0 standard (its own W4):
+    added COPYRIGHT and UPSTREAM.md documenting the GPLv3 C11 editor
+    and MIT-licensed micro runtime data and embedded tables; renamed
+    AI_PROVENANCE.md to AI-BLAME.md (keeping its pre-2026-11-17
+    milestone table) and updated ROADMAP.md; added the version line and
+    WHERE THINGS ARE to README; made all six README-<folder> files
+    standard with tam-edit's notes under IN THIS REPOSITORY; renamed
+    reviews/review-001.md to reviews/R1-cursor-movement.md and updated
+    links in WHATNOW and reviews/README-reviews.
+  - tools/idol-check ../tam-edit passes at 0.2.0.
+  - Recorded tam-edit in plans/P1-standard.md and revised work/WHATNOW
+    to point NEXT item 1 at libtam.
+
+
+FAILED
+
+  - Nothing.
+
+
+HANDOFF
+
+  - Continue NEXT in work/WHATNOW: libtam is next for the 0.2.0
+    standard (then tam, tamlinux-tools, tamlinux), followed by blame
+    everywhere and the tamlinux survey/plan.

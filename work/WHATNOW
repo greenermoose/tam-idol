@@ -3,7 +3,7 @@ WHATNOW
 What tam-idol is doing now and what comes next. Read this first; revise
 it at the end of every session (work/README-work).
 
-Updated: 2026-11-20, with W9
+Updated: 2026-11-20, with W10
 
 
 STATE
@@ -21,9 +21,9 @@ STATE
   and old records live in work/history/ (standard 0.2.0, W8).
 
   tam-mail (W1), tam-file (W2), tam-clam (W3), tam-pane (W4),
-  tam-last (W5), tam-data (W6), tam-view, tam-bud and tam-ring (W9)
-  follow the 0.2.0 standard. Every other repository still has gaps;
-  ROADMAP.md lists the ones they share.
+  tam-last (W5), tam-data (W6), tam-view, tam-bud, tam-ring (W9) and
+  tam-edit (W10) follow the 0.2.0 standard. Every other repository still
+  has gaps; ROADMAP.md lists the ones they share.
 
 
 NEXT
@@ -31,15 +31,14 @@ NEXT
   Fred left several items for later sessions (ROADMAP.md). Take one per
   session.
 
-  1. Bring tam-edit up to standard, following plans/P1-standard.md:
-     run tools/idol-check ../tam-edit, add COPYRIGHT, UPSTREAM.md and
-     AI-BLAME.md, make each README-<folder> standard with tam-edit's own
-     text under IN THIS REPOSITORY, rename reviews/review-001.md to
-     R1-... (fixing any links), add the version line to README, write
-     its W record and revise its WHATNOW. Done when idol-check passes.
-     Claim only those paths; other sessions may be working in tam-edit.
-     Then continue in ROADMAP.md's order (libtam, tam, tamlinux-tools,
-     tamlinux), skipping repositories already done.
+  1. Bring libtam up to standard, following plans/P1-standard.md:
+     run tools/idol-check ../libtam, add what is missing, rename
+     AI_PROVENANCE.md to AI-BLAME.md, make each README-<folder> standard
+     with libtam's own text under IN THIS REPOSITORY, add the version
+     line to README, write its W record and revise its WHATNOW. Done
+     when idol-check passes. Claim only those paths; other sessions may
+     be working in libtam. Then continue in ROADMAP.md's order (tam,
+     tamlinux-tools, tamlinux), skipping repositories already done.
   2. Blame everywhere: rename every AI_PROVENANCE.md to AI-BLAME.md,
      and rename "provenance" in tamlinux's
      docs/ai-provenance-standard.md, the ai-provenance skill, the agent
@@ -60,9 +59,6 @@ NEXT
 WAITING FOR FRED
 
   - Approval of the tamlinux plan, once NEXT item 3 has written it.
-
-  tam-edit is settled: it started fresh on 2026-11-18 as a new
-  repository on dev, with the old fork archived as tam-edit-micro-fork.
 
 
 WATCH OUT
