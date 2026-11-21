@@ -3,13 +3,13 @@ WHATNOW
 What tam-idol is doing now and what comes next. Read this first; revise
 it at the end of every session (work/README-work).
 
-Updated: 2026-11-20, with W14
+Updated: 2026-11-21, with W15
 
 
 STATE
 
-  Version 1.0.0 on branch dev (tagged 1.0.0 / v1.0.0 on Fred's word).
-  The standard is written down: README has the standard set and the
+  Version 1.1.0 on branch dev (1.0.0 tagged 1.0.0 / v1.0.0 on Fred's
+  word). The standard is written down: README has the standard set and the
   procedures, arch/layout.md the list that tools/idol-check checks, and
   each README-<folder> the text that every repository copies above its
   IN THIS REPOSITORY section.

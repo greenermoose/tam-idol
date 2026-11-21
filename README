@@ -50,6 +50,8 @@ THE STANDARD SET
   src/, include/    the source
   tests/            the tests that make test runs
   tools/            helper scripts for developing the project
+  sandbox/          optional; test files, demos, and ways to play with
+                    the program (with sandbox/README-sandbox)
 
   ideas/sources and tools/pull-references are standard wherever a
   repository keeps local clones of the projects it learns from.
@@ -143,6 +145,7 @@ WHERE THINGS ARE
   plans/           the plan to bring every repository up to standard
   reviews/         reviews of the standard
   work/            WHATNOW (read it first) and the work records
+  sandbox/         the standard README-sandbox template
   tools/           idol-check and pull-references
   ROADMAP.md       versions of the standard and the repositories to do
   UPSTREAM.md      code taken from other projects (none)

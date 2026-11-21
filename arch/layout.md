@@ -38,7 +38,8 @@ work/ cutover live in work/history/, read-only and not indexed.
     src/            the source
     tests/          what make test runs
 
-`include/` and `tools/` are added when the project needs them.
+`include/`, `tools/`, and `sandbox/` are added when the project needs them.
+When `sandbox/` exists, it has `sandbox/README-sandbox`.
 
 ## Records
 

@@ -5,6 +5,13 @@ to the standard or changes it; a patch version fixes wording or
 `tools/idol-check` without changing what a repository must have.
 `plans/P1-standard.md` has the work items.
 
+## 1.1.0: `sandbox/` for testing and demos
+
+Added `sandbox/` (`sandbox/README-sandbox`) as an optional standard
+folder for test files, demos, and trying a project out by hand.
+`tools/idol-check` checks `sandbox/README-sandbox` whenever a repository
+has `sandbox/`. Done 2026-11-21 (W15).
+
 ## 0.2.1: allow `work/ai-blame-standard.md`
 
 Patch update to `tools/idol-check` and `arch/layout.md` so `tamlinux`

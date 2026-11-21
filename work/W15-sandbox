@@ -1,0 +1,38 @@
+W15 SANDBOX FOLDER
+
+Date: 2026-11-21
+AI harness: Antigravity CLI
+AI model: Gemini 4 Hydrogen (Medium)
+Commits: the commit that adds this record
+
+
+GUIDANCE
+
+  Fred: "Add a sandbox/ folder to tam-idol. This is for testing. See
+  tam-view for an example."
+  Confirmed: sandbox/ is optional (like tools/ and include/), and
+  tools/idol-check checks sandbox/README-sandbox whenever sandbox/
+  exists.
+
+
+DONE
+
+  - Added sandbox/README-sandbox with the standard text above
+    IN THIS REPOSITORY.
+  - Updated arch/layout.md and README to document sandbox/ as an
+    optional standard folder.
+  - Updated tools/idol-check to verify sandbox/README-sandbox when
+    sandbox/ exists and to list it under --list.
+  - Bumped VERSION to 1.1.0 and noted it in ROADMAP.md.
+
+
+FAILED
+
+  - Nothing.
+
+
+HANDOFF
+
+  - Repositories that add sandbox/ (starting with tam-pane) copy
+    sandbox/README-sandbox above IN THIS REPOSITORY and pass
+    tools/idol-check.

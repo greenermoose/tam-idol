@@ -22,6 +22,7 @@ if [ "${1:-}" = --list ]; then
 	echo "  no docs/ai directory; old records in work/history"
 	echo "  with reference clones: ideas/sources, tools/pull-references"
 	echo "  with code: Makefile, src/, tests/"
+	echo "  with sandbox/: sandbox/README-sandbox"
 	echo "  branch: dev"
 	exit 0
 fi
@@ -60,6 +61,16 @@ for repo in "$@"; do
 			gap "$r differs from tam-idol's above '$marker'"
 		fi
 	done
+	if [ -d "$repo/sandbox" ]; then
+		r="sandbox/README-sandbox"
+		if [ ! -f "$repo/$r" ]; then
+			gap "missing $r"
+		elif ! grep -q "^$marker\$" "$repo/$r"; then
+			gap "$r has no '$marker' section"
+		elif [ "$(standard "$repo/$r")" != "$(standard "$idol/$r")" ]; then
+			gap "$r differs from tam-idol's above '$marker'"
+		fi
+	fi
 	[ -f "$repo/work/WHATNOW" ] || gap "missing work/WHATNOW"
 	[ ! -d "$repo/docs/ai" ] || gap "has a docs/ai directory"
 
