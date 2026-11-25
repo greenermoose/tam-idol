@@ -59,6 +59,14 @@ THE STANDARD SET
   arch/layout.md lists the set with the reason for each entry.
 
 
+KEYBINDINGS
+
+  keys/keybindings.md is the shared standard for every Tamlinux
+  program with keyboard bindings. It defines key ownership, common
+  actions, and console fallbacks. Each program links to the standard
+  from arch/keys.md and documents its program-specific bindings there.
+
+
 THE PROCEDURES
 
   Starting and ending a session. Read work/WHATNOW first: its NEXT
@@ -142,6 +150,7 @@ WHERE THINGS ARE
   arch/            why the standard is the way it is, and its layout
   bugs/            defects in the standard or in idol-check
   ideas/           conventions of other projects we learn from
+  keys/            the keybinding standard for all Tamlinux programs
   plans/           the plan to bring every repository up to standard
   reviews/         reviews of the standard
   work/            WHATNOW (read it first) and the work records

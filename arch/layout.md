@@ -41,6 +41,13 @@ work/ cutover live in work/history/, read-only and not indexed.
 `include/`, `tools/`, and `sandbox/` are added when the project needs them.
 When `sandbox/` exists, it has `sandbox/README-sandbox`.
 
+## Shared keybinding standard
+
+tam-idol maintains the shared standard in `keys/keybindings.md`, with
+`keys/README-keys` describing the folder. Each Tamlinux program with
+keyboard bindings links to the standard from `arch/keys.md` and
+documents its program-specific bindings there.
+
 ## Records
 
     bugs/B<n>-<name>.md      one bug

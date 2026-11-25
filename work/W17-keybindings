@@ -1,0 +1,29 @@
+W17 SHARED KEYBINDING STANDARD
+
+Date: 2026-11-25
+AI harness: codex 0.172.0
+AI model: gpt-6.2-sol
+
+GUIDANCE
+
+  Fred: "Put the keybindings standard in a new folder, keys/, in the
+  tam-idol repo. See tamlinux/arch/keybindings.md. Bump the tam-idol
+  version to include keybindings as a standard for all Tamlinux programs."
+
+DONE
+
+  - Moved the standard from tamlinux/arch/keybindings.md into
+    keys/keybindings.md, preserving the binding tables and command
+    inventory. Checked the cross-repository reference targets.
+  - Bumped the standard to 1.2.0 and documented the shared standard in
+    README, ROADMAP.md, arch/layout.md, and idol-check --list.
+  - idol-check passed on tam-idol, tamlinux, tam-last, and tam-edit.
+
+FAILED
+
+  tam-clam has a pre-existing difference in sandbox/README-sandbox.
+
+HANDOFF
+
+  Link programs' arch/keys.md to keys/keybindings.md as their input
+  layers adopt the standard.

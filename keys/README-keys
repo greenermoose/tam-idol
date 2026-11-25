@@ -1,0 +1,10 @@
+KEYBINDINGS
+
+This folder holds the shared keybinding standard for Tamlinux programs.
+It covers key ownership, common actions, and console fallbacks.
+Programs link to it from arch/keys.md and describe their own bindings
+there.
+
+IN THIS REPOSITORY
+
+  keybindings.md   the Tamlinux keybinding standard

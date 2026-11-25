@@ -3,18 +3,21 @@ WHATNOW
 What tam-idol is doing now and what comes next. Read this first; revise
 it at the end of every session (work/README-work).
 
-Updated: 2026-11-25, with W16
+Updated: 2026-11-25, with W17
 
 
 STATE
 
-  Version 1.1.0 on branch dev (1.0.0 tagged 1.0.0 / v1.0.0 on Fred's
+  Version 1.2.0 on branch dev (1.0.0 tagged 1.0.0 / v1.0.0 on Fred's
   word). The standard is written down: README has the standard set and the
   procedures, arch/layout.md the list that tools/idol-check checks, and
   each README-<folder> the text that every repository copies above its
   IN THIS REPOSITORY section.
 
-  Every Tamlinux repository now passes tools/idol-check: tam-clif (W1),
+  keys/keybindings.md is the shared keybinding standard. Programs link
+  to it from arch/keys.md and document their own bindings there (W17).
+
+  The initial rollout covered these repositories: tam-clif (W1),
   tam-file (W2), tam-clam (W3), tam-pane (W4), tam-last (W5), tam-data
   (W6), tam-view, tam-bud, tam-ring (W9), tam-edit (W10), libtam (W11),
   tam (W12), tamlinux-tools (W13), and tamlinux (W14).
@@ -31,6 +34,8 @@ NEXT
      change tam-idol first, bump VERSION, and say why in ROADMAP.md.
   2. Start every new repository from tam-idol and verify it with
      tools/idol-check.
+  3. Use the shared keybinding standard when updating a program's
+     input layer.
 
 
 WAITING FOR FRED
