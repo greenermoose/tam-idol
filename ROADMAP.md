@@ -32,7 +32,7 @@ repositories following the standard update their README and
 
 The standard set, the `README-<folder>` text for arch, bugs, ideas,
 plans, reviews and work, the procedures in `README`, and
-`tools/idol-check`. tam-mail is the first repository to follow it,
+`tools/idol-check`. tam-clif is the first repository to follow it,
 which tests the standard on a real project. Done 2026-11-18.
 
 ## Before 1.0.0: every other repository, one at a time

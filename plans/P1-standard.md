@@ -15,7 +15,7 @@ person or an agent who knows one repository can work in any of them.
 the procedures; `arch/principles.md` and `arch/layout.md`; the six
 `README-<folder>` files written about "this repository", with an
 `IN THIS REPOSITORY` section at the end of each; `tools/idol-check`;
-`tools/pull-references`. tam-mail, the first repository to follow it,
+`tools/pull-references`. tam-clif, the first repository to follow it,
 gets everything it is missing, and its folder READMEs are made standard
 with its own notes moved into `IN THIS REPOSITORY`. Done 2026-11-18.
 
@@ -67,7 +67,7 @@ further change for it.
 
 ## Done
 
-- tam-mail: 2026-11-18 (tam-idol 0.1.0; updated to 0.2.0).
+- tam-clif: 2026-11-18 (tam-idol 0.1.0; updated to 0.2.0).
 - tam-file: 2026-11-18 (tam-idol 0.1.0; updated to 0.2.0).
 - tam-clam: 2026-11-18 (tam-idol 0.1.0; updated to 0.2.0).
 - tam-pane: 2026-11-19 (tam-idol 0.1.0; updated to 0.2.0).

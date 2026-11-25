@@ -3,7 +3,7 @@ WHATNOW
 What tam-idol is doing now and what comes next. Read this first; revise
 it at the end of every session (work/README-work).
 
-Updated: 2026-11-21, with W15
+Updated: 2026-11-25, with W16
 
 
 STATE
@@ -14,7 +14,7 @@ STATE
   each README-<folder> the text that every repository copies above its
   IN THIS REPOSITORY section.
 
-  Every Tamlinux repository now passes tools/idol-check: tam-mail (W1),
+  Every Tamlinux repository now passes tools/idol-check: tam-clif (W1),
   tam-file (W2), tam-clam (W3), tam-pane (W4), tam-last (W5), tam-data
   (W6), tam-view, tam-bud, tam-ring (W9), tam-edit (W10), libtam (W11),
   tam (W12), tamlinux-tools (W13), and tamlinux (W14).
@@ -22,6 +22,7 @@ STATE
   D272's branch rename (W7), D278's docs/ai/ retirement (W8), "Blame
   everywhere" across every repository including tam (W14), and the
   tamlinux survey and reorganization (W14) are all complete on dev.
+  References to the renamed tam-clif repository were updated (W16).
 
 
 NEXT

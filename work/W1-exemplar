@@ -1,4 +1,4 @@
-W1 TAM-IDOL, THE STANDARD, AND TAM-MAIL FOLLOWING IT
+W1 TAM-IDOL, THE STANDARD, AND TAM-CLIF FOLLOWING IT
 
 Date: 2026-11-18
 AI harness: Claude Code 2.1.327
@@ -49,10 +49,10 @@ DONE
     Changelog).
   - tools/idol-check: reports missing files, folder READMEs that differ
     from tam-idol's, misnamed records and a missing dev branch. Run
-    over every repository: tam-idol and tam-mail pass, the others list
+    over every repository: tam-idol and tam-clif pass, the others list
     their gaps (summed up in ROADMAP.md).
   - tools/pull-references copied from tam-pane.
-  - tam-mail brought up to standard (its own W1).
+  - tam-clif brought up to standard (its own W1).
   - Fred's three decisions written into ROADMAP.md, plans/P1-standard.md
     and WHATNOW (NEXT items 2 to 4); none of that work started.
   - tam-edit's branch question closed: Fred had tam-edit started fresh

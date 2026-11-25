@@ -1,0 +1,32 @@
+W16 RENAME REFERENCE TO TAM-CLIF
+
+Date: 2026-11-25
+AI harness: opencode 2.2.5
+AI model: big-pickle
+
+GUIDANCE
+
+  Fred: "Rename the tam-mail repo to be tam-clif. I need both the local
+         and remote renamed. I don't care about breaking links. This is
+         a dev repo so no one needs the old name."
+  Fred: "Rename everything. Replace tam-mail with tam-clif in the repo's
+         docs and update references in other repos. Requires commits in
+         multiple repos."
+  Fred: "Leave quotes intact (Recommended)".
+  Fred: "The name is tam-clif NOT tam-clf. Note the difference."
+  Fred: "Make it so."
+
+DONE
+
+  - Updated ROADMAP.md, plans/P1-standard.md and work notes from
+    tam-mail to tam-clif after the repository rename.
+  - Left the verbatim earlier prompt in W1-exemplar unchanged.
+
+FAILED
+
+  - An early edit used the typo tam-clf; corrected to tam-clif before
+    the commits.
+
+HANDOFF
+
+  - Keep the standard unchanged; WHATNOW holds the next items.
