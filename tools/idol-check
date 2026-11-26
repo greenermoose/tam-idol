@@ -23,7 +23,7 @@ if [ "${1:-}" = --list ]; then
 	echo "  with reference clones: ideas/sources, tools/pull-references"
 	echo "  with code: Makefile, src/, tests/"
 	echo "  with sandbox/: sandbox/README-sandbox"
-	echo "  with keybindings: arch/keys.md links to tam-idol's keys/keybindings.md"
+	echo "  with keybindings: keys/keybindings.md (and keys/README-keys) links to tam-idol's keys/keybindings.md"
 	echo "  branch: dev"
 	exit 0
 fi

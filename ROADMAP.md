@@ -5,6 +5,12 @@ to the standard or changes it; a patch version fixes wording or
 `tools/idol-check` without changing what a repository must have.
 `plans/P1-standard.md` has the work items.
 
+## 1.2.1 — Program keybindings in `keys/`
+
+Programs document their own keybindings in `keys/keybindings.md` (with
+`keys/README-keys`) instead of `arch/keys.md`, matching `tam-clif` and
+`tam-idol`. Done 2026-11-25 (W18).
+
 ## 1.2.0 — Shared keybinding standard
 
 `keys/keybindings.md` defines the shared bindings for every Tamlinux

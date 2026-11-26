@@ -63,8 +63,9 @@ KEYBINDINGS
 
   keys/keybindings.md is the shared standard for every Tamlinux
   program with keyboard bindings. It defines key ownership, common
-  actions, and console fallbacks. Each program links to the standard
-  from arch/keys.md and documents its program-specific bindings there.
+  actions, and console fallbacks. Each program documents its own
+  bindings in keys/keybindings.md (with keys/README-keys) and links to
+  the standard there.
 
 
 THE PROCEDURES

@@ -45,8 +45,9 @@ When `sandbox/` exists, it has `sandbox/README-sandbox`.
 
 tam-idol maintains the shared standard in `keys/keybindings.md`, with
 `keys/README-keys` describing the folder. Each Tamlinux program with
-keyboard bindings links to the standard from `arch/keys.md` and
-documents its program-specific bindings there.
+keyboard bindings documents its program-specific bindings in
+`keys/keybindings.md` (with `keys/README-keys`) and links to the
+standard there.
 
 ## Records
 

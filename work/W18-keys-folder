@@ -1,0 +1,28 @@
+W18 PROGRAM KEYBINDINGS IN KEYS/
+
+Date: 2026-11-25
+AI harness: agy 1.5.17
+AI model: Gemini 4 Hydrogen (Medium)
+Commits: the commit that adds this record
+
+GUIDANCE
+
+  Fred: "Move all keybinding docs from arch/ folders to keys/ folders for
+  tam repos. See tam-clif for an example. Make sure all keybindings abide
+  by the tam-idol/keys/keybindings.md standard."
+
+DONE
+
+  - Updated README, arch/layout.md, keys/README-keys,
+    keys/keybindings.md, and tools/idol-check --list so programs
+    document their own keybindings in keys/keybindings.md (with
+    keys/README-keys) rather than arch/keys.md.
+  - Bumped VERSION to 1.2.1 and recorded the change in ROADMAP.md.
+
+FAILED
+
+  - Nothing.
+
+HANDOFF
+
+  - Keep using keys/keybindings.md for per-program keybinding docs.

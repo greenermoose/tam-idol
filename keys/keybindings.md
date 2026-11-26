@@ -7,7 +7,7 @@ provides as it implements or updates its input layer. The standards for
 the compositor, terminal, shell, and applications describe which layer
 handles each key.
 
-Each program's `arch/keys.md` links to this standard and documents its
+Each program's `keys/keybindings.md` links to this standard and documents its
 program-specific bindings. The
 [cross-system keybinding survey](https://github.com/greenermoose/tamlinux/blob/dev/ideas/keybindings/synthesis.md)
 records the design research.
@@ -415,5 +415,5 @@ fallbacks, read-only single-key shortcuts, OSC 52 clipboard policy, and
 `tam-pane` resize styles) are settled as of 2026-11-23. Individual
 programs (`tam-pane`, `tam-last`, `tam-clam`, `tam`, `tam-edit`,
 `tam-file`, `tam-view`) can now reference this standard from their own
-`arch/keys.md` files and implement the shared `libtam` binding parser and
+`keys/keybindings.md` files and implement the shared `libtam` binding parser and
 standard action map.
