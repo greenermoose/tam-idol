@@ -1,4 +1,4 @@
-# P1: the standard, and every repository following it
+# P01: the standard, and every repository following it
 
 - **Status:** complete (2026-11-20)
 - **Versions:** 0.1.0 to 1.0.0

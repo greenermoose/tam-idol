@@ -54,7 +54,7 @@ standard there.
 `arch/roadmap.md` defines the standard `ROADMAP.md` structure: a header
 with `- **Current version:**` and `- **Progress:**`, a `## Phase summary`
 table, optional `## Decided`, `## Phases and milestones` with per-phase
-`### Phase P<n>:` headings linking to `plans/P<n>-<name>.md` and
+`### Phase PHxx:` headings linking to `plans/Pxx-<name>.md` and
 `Version | Milestone | Status` tables, and `## How a milestone is done`.
 `tools/idol-check` verifies the required sections and that every linked
 phase plan exists.
@@ -62,7 +62,7 @@ phase plan exists.
 ## Records
 
     bugs/B<n>-<name>.md      one bug
-    plans/P<n>-<name>.md     one work phase
+    plans/Pxx-<name>.md      one phase or supporting plan
     reviews/R<n>-<name>.md   one review
     work/W<n>-<name>         one work session (plain text)
     work/ai-blame-standard.md optional; the public AI blame standard
@@ -79,4 +79,6 @@ phase plan exists.
 
 Everything above the line `IN THIS REPOSITORY` in a repository's
 `README-<folder>` is the same as in tam-idol, word for word.
-The section from that line on is the repository's own.
+The section from that line on is the repository's own. Repositories
+with legacy roadmap headings may still use the previous plans README
+preamble, kept in `arch/legacy-plans-readme`.

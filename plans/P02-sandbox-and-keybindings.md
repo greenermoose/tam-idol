@@ -1,4 +1,4 @@
-# P2: Sandbox and shared keybinding standards
+# P02: Sandbox and shared keybinding standards
 
 - **Status:** done (2026-11-25)
 - **Versions:** 1.1.0 to 1.2.1

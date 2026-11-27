@@ -24,7 +24,7 @@ if [ "${1:-}" = --list ]; then
 	echo "  with code: Makefile, src/, tests/"
 	echo "  with sandbox/: sandbox/README-sandbox"
 	echo "  with keybindings: keys/keybindings.md (and keys/README-keys) links to tam-idol's keys/keybindings.md"
-	echo "  ROADMAP.md: arch/roadmap.md structure with existing plans/P<n>-<name>.md links"
+	echo "  ROADMAP.md: Phase PHxx headings with existing plans/Pxx-<name>.md links"
 	echo "  branch: dev"
 	exit 0
 fi
@@ -52,6 +52,8 @@ for repo in "$@"; do
 		! grep -q 'Follows the tam-idol [0-9][0-9.]* standard' "$repo/README"; then
 		gap "README does not say which tam-idol version it follows"
 	fi
+	phase_id='P[0-9]+'
+	plan_id='P[0-9]+'
 	if [ -f "$repo/ROADMAP.md" ]; then
 		rmap="$repo/ROADMAP.md"
 		grep -q '^- \*\*Current version:\*\*' "$rmap" ||
@@ -62,11 +64,17 @@ for repo in "$@"; do
 			gap "ROADMAP.md missing '## Phases and milestones' section"
 		grep -q '^## How a milestone is done$' "$rmap" ||
 			gap "ROADMAP.md missing '## How a milestone is done' section"
-		if ! grep -Eq '^### Phase P[0-9]+:' "$rmap"; then
-			gap "ROADMAP.md has no '### Phase P<n>:' sections"
-		elif grep -E '^### Phase P[0-9]+:' "$rmap" |
-			grep -Evq '\(plans/P[0-9]+-[a-z0-9.-]+\.md\)'; then
-			gap "ROADMAP.md has a phase heading without a plans/P<n>-<name>.md link"
+		if grep -q '^### Phase PH' "$rmap"; then
+			phase_id='PH(0[1-9]|[1-9][0-9]+)'
+			plan_id='P(0[1-9]|[1-9][0-9]+)'
+		fi
+		if ! grep -q '^### Phase ' "$rmap"; then
+			gap "ROADMAP.md has no phase headings"
+		elif grep '^### Phase ' "$rmap" | grep -Evq "^### Phase ${phase_id}:"; then
+			gap "ROADMAP.md has an invalid or mixed-format phase heading"
+		elif grep '^### Phase ' "$rmap" |
+			grep -Evq "\\(plans/${plan_id}-[a-z0-9.-]+\\.md\\)"; then
+			gap "ROADMAP.md has a phase heading without a valid plan link"
 		fi
 		for plink in $(grep -Eo 'plans/P[0-9]+-[a-z0-9.-]+\.md' "$rmap" | sort -u); do
 			[ -f "$repo/$plink" ] || gap "ROADMAP.md links missing plan $plink"
@@ -79,7 +87,9 @@ for repo in "$@"; do
 			gap "missing $r"
 		elif ! grep -q "^$marker\$" "$repo/$r"; then
 			gap "$r has no '$marker' section"
-		elif [ "$(standard "$repo/$r")" != "$(standard "$idol/$r")" ]; then
+		elif [ "$(standard "$repo/$r")" != "$(standard "$idol/$r")" ] &&
+			! { [ "$d" = plans ] && [ "$phase_id" = 'P[0-9]+' ] &&
+				[ "$(standard "$repo/$r")" = "$(standard "$idol/arch/legacy-plans-readme")" ]; }; then
 			gap "$r differs from tam-idol's above '$marker'"
 		fi
 	done
@@ -107,8 +117,10 @@ for repo in "$@"; do
 			README-*|WHATNOW|sources) continue ;;
 			ai-blame-standard.md) [ "$d" = work ] && continue ;;
 			esac
-			if ! echo "$b" | grep -Eq "^$letter[0-9]+-[a-z0-9.-]+$ext\$"; then
-				gap "$d/$b is not named $letter<n>-<name>$ext"
+			record_id="$letter[0-9]+"
+			[ "$d" = plans ] && record_id=$plan_id
+			if ! echo "$b" | grep -Eq "^${record_id}-[a-z0-9.-]+$ext\$"; then
+				gap "$d/$b has an invalid record name"
 			fi
 		done
 	done

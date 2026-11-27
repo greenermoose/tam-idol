@@ -17,12 +17,12 @@ A standard `ROADMAP.md` has these sections in order:
    - `- **Versioning:**` how version numbers map to phases and milestones.
 2. **`## Phase summary`.** A Markdown table with one row per phase:
    `Phase | Versions | Goal | Plan | Status`. Every phase links directly
-   to its `plans/P<n>-<name>.md` file.
+   to its `plans/Pxx-<name>.md` file.
 3. **`## Decided`** *(optional).* Settled design decisions with their
    dates, kept concise. Include only when the repository has recorded
    decisions.
 4. **`## Phases and milestones`.** One subsection per phase:
-   `### Phase P<n>: <Title> (<versions>) — [P<n>-<name>.md](plans/P<n>-<name>.md)`
+   `### Phase PHxx: <Title> (<versions>) — [Pxx-<name>.md](plans/Pxx-<name>.md)`
    followed by a `Version | Milestone | Status` table listing each
    milestone in that phase. Every milestone appears once, under its phase.
 5. **`## How a milestone is done`.** The completion rule: acceptance
@@ -41,8 +41,12 @@ Use these status values in both the phase summary and milestone tables:
 
 ## Relation to plans
 
-Every milestone belongs to a phase, and every phase has a plan file in
-`plans/P<n>-<name>.md` (following `plans/README-plans`). `ROADMAP.md`
+Number phases in milestone order, starting with `PH01`. Use independent,
+stable plan IDs starting with `P01`. Both identifiers use at least two
+digits. For example, `PH01` may link to `plans/P32-foundation.md`.
+
+Every milestone belongs to a phase, and every phase links to a plan in
+`plans/`. Supporting plans can cover individual work items. `ROADMAP.md`
 gives the at-a-glance overview; detailed work items, acceptance checks,
 dependencies, risks, and open points live in the phase plan.
 
@@ -56,12 +60,19 @@ When a milestone lands:
    milestone's `Status` cell, and the phase's `Status` cell when the
    phase finishes.
 
+## Migrating from 1.3.0
+
+Convert all phase headings and their summary rows together, pad single-digit
+plan IDs, update active links, and copy the current plans README preamble.
+The checker accepts the earlier `Phase P<n>:` headings and plans README
+preamble for repositories still using the older format.
+
 ## What `tools/idol-check` verifies
 
 - `ROADMAP.md` exists and contains `- **Current version:**`,
   `## Phase summary`, `## Phases and milestones`, and
   `## How a milestone is done`.
-- At least one `### Phase P<n>:` heading is present, and every
-  `### Phase P<n>:` heading links to a `plans/P<n>-<name>.md` file.
-- Every `plans/P<n>-<name>.md` file linked from `ROADMAP.md` exists on
+- At least one `### Phase PHxx:` heading is present, and every
+  `### Phase PHxx:` heading links to a `plans/Pxx-<name>.md` file.
+- Every `plans/Pxx-<name>.md` file linked from `ROADMAP.md` exists on
   disk.

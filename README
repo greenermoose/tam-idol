@@ -10,7 +10,7 @@ tam-idol has no program in it. Its version (VERSION) is the version of
 the standard, and each repository's README says which version it
 follows, for example:
 
-  Follows the tam-idol 0.2.0 standard.
+  Follows the tam-idol 1.4.0 standard.
 
 tools/idol-check reports what a repository is missing.
 
@@ -81,8 +81,9 @@ THE PROCEDURES
 
   Plans and roadmap. ROADMAP.md gives the at-a-glance phase summary and
   per-phase milestone status tables (arch/roadmap.md). Every milestone
-  belongs to a phase, and every phase has one plan, P<n>-<name>.md, in
-  plans/. Fred's decisions go into the plan (and ROADMAP.md's Decided
+  belongs to a PHxx phase, and each phase links to a Pxx-<name>.md plan.
+  Supporting work can have its own plan. Fred's decisions go into the
+  plan (and ROADMAP.md's Decided
   section when cross-cutting) with their date; until then a remark from
   Fred is context, not a decision. plans/README-plans.
 

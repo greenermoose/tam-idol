@@ -3,17 +3,21 @@ WHATNOW
 What tam-idol is doing now and what comes next. Read this first; revise
 it at the end of every session (work/README-work).
 
-Updated: 2026-11-26, with W19
+Updated: 2026-11-27, with W20
 
 
 STATE
 
-  Version 1.3.0 on branch dev (1.0.0 tagged 1.0.0 / v1.0.0 on Fred's
+  Version 1.4.0 on branch dev (1.0.0 tagged 1.0.0 / v1.0.0 on Fred's
   word). The standard is written down: README has the standard set and the
   procedures, arch/layout.md the list that tools/idol-check checks,
   arch/roadmap.md the ROADMAP.md standard (W19), and
   each README-<folder> the text that every repository copies above its
   IN THIS REPOSITORY section.
+
+  Roadmaps use PHxx in milestone order and Pxx for independent plan
+  IDs (W20). The checker supports the 1.3.0 layout during migration.
+  Tamlinux and tam-idol use the new format.
 
   keys/keybindings.md is the shared keybinding standard. Programs
   document their own bindings in keys/keybindings.md (with
@@ -50,8 +54,8 @@ WATCH OUT
 
   - tools/idol-check and arch/layout.md hold the same lists; change
     both in the same commit.
-  - A README-<folder> change in tam-idol makes every repository that
-    copied the old text fail idol-check. Bump VERSION and expect to
-    update them.
+  - The plans README accepts the exact 1.3.0 preamble for legacy
+    roadmaps. Other shared folder preambles must match the current
+    tam-idol templates.
   - /bin/sh here is bash. Keep the tools POSIX; no dash is installed to
     test them with.

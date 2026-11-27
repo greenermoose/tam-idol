@@ -1,0 +1,27 @@
+W20 SEPARATE PHASE AND PLAN IDENTIFIERS
+
+Date: 2026-11-27
+AI harness: Codex CLI 0.172.0
+AI model: gpt-6.2-sol
+
+GUIDANCE
+
+  Fred: "Use PHxx for phases and Pxx for plans, e.g. PH01 is phase 1,
+  P01 is plan 1."
+  Fred: "Implement the plan."
+
+DONE
+
+  - Defined PHxx phase headings and stable Pxx plan IDs for 1.4.0.
+  - Kept the old heading and exact plans README format usable for
+    repositories still on 1.3.0.
+  - Verified tam-idol, tamlinux, and unchanged tam-pane. Negative
+    checks rejected malformed headings, mixed formats, and missing links.
+
+FAILED
+
+  - Nothing outstanding.
+
+HANDOFF
+
+  - Apply the new layout when each remaining repository next migrates.

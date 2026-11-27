@@ -1,4 +1,4 @@
-# P3: Standard ROADMAP.md format and rollout
+# P03: Standard ROADMAP.md format and rollout
 
 - **Status:** done (version 1.3.0, 2026-11-26)
 - **Versions:** 1.3.0

@@ -1,19 +1,15 @@
 PLANS
 
-This folder holds one plan per work phase of this repository's project.
-A phase covers a range of versions; ROADMAP.md lists the milestones and
-their version numbers, and each plan says how to reach them.
+This folder holds phase plans and supporting plans. ROADMAP.md lists
+ordered phases, their milestones, and the plan for each phase.
 
 
 NAMING
 
-  P<n>-<name>.md, numbered in the order the phases run, for example
-  P1-foundation.md for 0.0.x. IN THIS REPOSITORY, below, lists the
-  plans with their version ranges.
-
-  Numbers are never reused. A new phase gets the next number, even when
-  it runs between two existing ones; its version range says where it
-  fits.
+  Roadmap phases use PH01, PH02, and so on in milestone order. Plan
+  files use P01-<name>.md, P02-<name>.md, and so on. Use at least two
+  digits in both identifiers. A plan keeps its number when the roadmap
+  order changes. Assign new plans the next unused number.
 
 
 WHAT A PLAN HOLDS
@@ -42,9 +38,7 @@ KEEPING PLANS CURRENT
 
 IN THIS REPOSITORY
 
-  P1-standard.md                 0.1.0 to 1.0.0: document the standard,
-                                 then bring every repository up to it
-  P2-sandbox-and-keybindings.md  1.1.0 to 1.2.1: sandbox/ folder and
-                                 shared keys/keybindings.md standard
-  P3-roadmap-standard.md         1.3.0: standard ROADMAP.md format and
-                                 rollout across all repositories
+  PH01 / P01-standard.md                 Initial standard and rollout
+  PH02 / P02-sandbox-and-keybindings.md  Sandbox and shared bindings
+  PH03 / P03-roadmap-standard.md         Standard roadmap structure
+  PH04 / P04-phase-identifiers.md        Separate phase and plan IDs
