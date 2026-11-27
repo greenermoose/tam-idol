@@ -10,7 +10,7 @@ tam-idol has no program in it. Its version (VERSION) is the version of
 the standard, and each repository's README says which version it
 follows, for example:
 
-  Follows the tam-idol 1.4.0 standard.
+  Follows the tam-idol 1.5.0 standard.
 
 tools/idol-check reports what a repository is missing.
 

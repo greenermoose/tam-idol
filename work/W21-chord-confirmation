@@ -1,0 +1,28 @@
+W21 ONE-HAND CHORD CONFIRMATION
+
+Date: 2026-11-27
+AI harness: Codex CLI 0.172.0
+AI model: gpt-6.2-sol
+Commits: Same commit as this record.
+Transcript: Retained privately by the author.
+
+GUIDANCE
+
+  Fred: "Want to make sure CapsLock -> Meta -> A -> CapsLock sends Meta +
+  A. Was a little confusing. Please clarify in your plan."
+  Fred: "Implement the plan."
+
+DONE
+
+  - Documented the exact Meta+A sequence and how the opening key
+    confirms or cancels shortcuts and menu commands in tam-pane.
+  - Versioned the shared keybinding standard and passed idol-check.
+
+FAILED
+
+  - Nothing.
+
+HANDOFF
+
+  - Use the updated compositor sequence when documenting one-hand
+    shortcuts in individual programs.

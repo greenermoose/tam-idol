@@ -4,7 +4,7 @@
 layout, folder READMEs, keybinding rules, roadmap format, and
 `tools/idol-check`.
 
-- **Current version:** `1.4.0` (branch `dev`)
+- **Current version:** `1.5.0` (branch `dev`)
 - **Progress:** 3 of 4 phases done. PH04 adds separate phase and plan IDs.
 - **Versioning:** `VERSION` is the version of the standard; minor adds to
   or changes the standard, patch fixes wording or `tools/idol-check`
@@ -49,6 +49,11 @@ layout, folder READMEs, keybinding rules, roadmap format, and
 | Version | Milestone | Status |
 | --- | --- | --- |
 | **1.4.0** | Specify PHxx phase order and stable Pxx plan IDs, teach `idol-check` both formats, and migrate tam-idol and tamlinux | In progress |
+
+## Keybinding updates
+
+Version 1.5.0 defines confirmation and cancellation by the opening key
+for the compositor's one-handed chord composer.
 
 ## How a milestone is done
 

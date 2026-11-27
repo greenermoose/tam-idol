@@ -3,12 +3,15 @@ WHATNOW
 What tam-idol is doing now and what comes next. Read this first; revise
 it at the end of every session (work/README-work).
 
-Updated: 2026-11-27, with W20
+Updated: 2026-11-27, with W21
 
 
 STATE
 
-  Version 1.4.0 on branch dev (1.0.0 tagged 1.0.0 / v1.0.0 on Fred's
+  The 1.5.0 keybinding standard defines how the compositor confirms
+  and cancels one-handed chords (W21).
+
+  Version 1.5.0 on branch dev (1.0.0 tagged 1.0.0 / v1.0.0 on Fred's
   word). The standard is written down: README has the standard set and the
   procedures, arch/layout.md the list that tools/idol-check checks,
   arch/roadmap.md the ROADMAP.md standard (W19), and
