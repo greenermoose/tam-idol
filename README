@@ -25,7 +25,8 @@ THE STANDARD SET
                     code taken from other projects
   LICENSE           the license text (GNU GPL, version 3)
   VERSION           the version, one line, for example 0.0.1
-  ROADMAP.md        milestones with their version numbers
+  ROADMAP.md        phase summary, milestones with status, and plan links
+                    (arch/roadmap.md)
   UPSTREAM.md       every piece of code taken from another project
   AI-BLAME.md       how this repository records which AI did what
   .gitignore        build output and nothing else
@@ -78,10 +79,12 @@ THE PROCEDURES
   Bugs. One file per bug, B<n>-<name>.md, with a status and a severity.
   A number is never reused. bugs/README-bugs.
 
-  Plans. One plan per work phase, P<n>-<name>.md, covering a range of
-  versions from ROADMAP.md. Fred's decisions go into the plan with
-  their date; until then a remark from Fred is context, not a decision.
-  plans/README-plans.
+  Plans and roadmap. ROADMAP.md gives the at-a-glance phase summary and
+  per-phase milestone status tables (arch/roadmap.md). Every milestone
+  belongs to a phase, and every phase has one plan, P<n>-<name>.md, in
+  plans/. Fred's decisions go into the plan (and ROADMAP.md's Decided
+  section when cross-cutting) with their date; until then a remark from
+  Fred is context, not a decision. plans/README-plans.
 
   Reviews. One file per review, R<n>-<name>.md, naming the exact commit
   examined. A confirmed finding becomes a bug. A review is evidence to

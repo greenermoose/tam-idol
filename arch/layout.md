@@ -49,6 +49,16 @@ keyboard bindings documents its program-specific bindings in
 `keys/keybindings.md` (with `keys/README-keys`) and links to the
 standard there.
 
+## Roadmap standard
+
+`arch/roadmap.md` defines the standard `ROADMAP.md` structure: a header
+with `- **Current version:**` and `- **Progress:**`, a `## Phase summary`
+table, optional `## Decided`, `## Phases and milestones` with per-phase
+`### Phase P<n>:` headings linking to `plans/P<n>-<name>.md` and
+`Version | Milestone | Status` tables, and `## How a milestone is done`.
+`tools/idol-check` verifies the required sections and that every linked
+phase plan exists.
+
 ## Records
 
     bugs/B<n>-<name>.md      one bug

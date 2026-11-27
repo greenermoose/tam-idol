@@ -24,6 +24,7 @@ if [ "${1:-}" = --list ]; then
 	echo "  with code: Makefile, src/, tests/"
 	echo "  with sandbox/: sandbox/README-sandbox"
 	echo "  with keybindings: keys/keybindings.md (and keys/README-keys) links to tam-idol's keys/keybindings.md"
+	echo "  ROADMAP.md: arch/roadmap.md structure with existing plans/P<n>-<name>.md links"
 	echo "  branch: dev"
 	exit 0
 fi
@@ -50,6 +51,26 @@ for repo in "$@"; do
 	if [ -f "$repo/README" ] &&
 		! grep -q 'Follows the tam-idol [0-9][0-9.]* standard' "$repo/README"; then
 		gap "README does not say which tam-idol version it follows"
+	fi
+	if [ -f "$repo/ROADMAP.md" ]; then
+		rmap="$repo/ROADMAP.md"
+		grep -q '^- \*\*Current version:\*\*' "$rmap" ||
+			gap "ROADMAP.md missing '- **Current version:**' line"
+		grep -q '^## Phase summary$' "$rmap" ||
+			gap "ROADMAP.md missing '## Phase summary' section"
+		grep -q '^## Phases and milestones$' "$rmap" ||
+			gap "ROADMAP.md missing '## Phases and milestones' section"
+		grep -q '^## How a milestone is done$' "$rmap" ||
+			gap "ROADMAP.md missing '## How a milestone is done' section"
+		if ! grep -Eq '^### Phase P[0-9]+:' "$rmap"; then
+			gap "ROADMAP.md has no '### Phase P<n>:' sections"
+		elif grep -E '^### Phase P[0-9]+:' "$rmap" |
+			grep -Evq '\(plans/P[0-9]+-[a-z0-9.-]+\.md\)'; then
+			gap "ROADMAP.md has a phase heading without a plans/P<n>-<name>.md link"
+		fi
+		for plink in $(grep -Eo 'plans/P[0-9]+-[a-z0-9.-]+\.md' "$rmap" | sort -u); do
+			[ -f "$repo/$plink" ] || gap "ROADMAP.md links missing plan $plink"
+		done
 	fi
 
 	for d in $folders; do

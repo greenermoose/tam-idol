@@ -1,0 +1,32 @@
+W19 STANDARD ROADMAP.MD FORMAT (TAM-IDOL 1.3.0)
+
+Date: 2026-11-26
+AI harness: agy 1.5.18
+AI model: Gemini 4 Neon (Medium)
+Commits: the commit that adds this record
+
+GUIDANCE
+
+  Fred approved standardizing ROADMAP.md across all Tamlinux repositories
+  (combining tam-knox's status summary tables with tam-clam's phase
+  organization and plan links), codifying it in tam-idol 1.3.0, and
+  ensuring every milestone in every repository has an associated plan.
+
+DONE
+
+  - Added arch/roadmap.md defining the ROADMAP.md standard, updated
+    arch/layout.md and README, and extended tools/idol-check to verify
+    required ROADMAP.md sections and existing plans/P<n>-<name>.md links.
+  - Added plans/P2-sandbox-and-keybindings.md and
+    plans/P3-roadmap-standard.md, updated plans/README-plans, converted
+    tam-idol/ROADMAP.md to the 1.3.0 exemplar, and bumped VERSION to 1.3.0.
+  - Rolled out the 1.3.0 ROADMAP.md standard and missing phase plans
+    across all 16 other tam-idol repositories.
+
+FAILED
+
+  - Nothing.
+
+HANDOFF
+
+  - Every new or updated repository must pass tools/idol-check at 1.3.0.

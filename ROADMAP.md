@@ -1,111 +1,51 @@
 # tam-idol roadmap
 
-tam-idol's version is the version of the standard. A minor version adds
-to the standard or changes it; a patch version fixes wording or
-`tools/idol-check` without changing what a repository must have.
-`plans/P1-standard.md` has the work items.
+`tam-idol` is the exemplar Tamlinux repository defining the standard
+layout, folder READMEs, keybinding rules, roadmap format, and
+`tools/idol-check`.
 
-## 1.2.1 — Program keybindings in `keys/`
+- **Current version:** `1.3.0` (branch `dev`)
+- **Progress:** All 3 phases done (P1–P3 done)
+- **Versioning:** `VERSION` is the version of the standard; minor adds to
+  or changes the standard, patch fixes wording or `tools/idol-check`
+  without changing what a repository must have.
 
-Programs document their own keybindings in `keys/keybindings.md` (with
-`keys/README-keys`) instead of `arch/keys.md`, matching `tam-clif` and
-`tam-idol`. Done 2026-11-25 (W18).
+## Phase summary
 
-## 1.2.0 — Shared keybinding standard
+| Phase | Versions | Goal | Plan | Status |
+| --- | --- | --- | --- | --- |
+| **P1** | 0.1.0–1.0.0 | Write down the standard and bring every Tamlinux repository up to it | [P1-standard.md](plans/P1-standard.md) | Done (2026-11-20) |
+| **P2** | 1.1.0–1.2.1 | Add optional `sandbox/` folder and shared `keys/keybindings.md` standard | [P2-sandbox-and-keybindings.md](plans/P2-sandbox-and-keybindings.md) | Done (2026-11-25) |
+| **P3** | 1.3.0 | Standardize `ROADMAP.md` format, enforce in `idol-check`, and roll out across all repos | [P3-roadmap-standard.md](plans/P3-roadmap-standard.md) | Done (2026-11-26) |
 
-`keys/keybindings.md` defines the shared bindings for every Tamlinux
-program with keyboard controls. Each program links to the standard from
-`arch/keys.md` and documents its own bindings there. The former
-`tamlinux/arch/keybindings.md` points to the new home. Done 2026-11-25
-(W17).
+## Phases and milestones
 
-## 1.1.0: `sandbox/` for testing and demos
+### Phase P1: The standard and initial rollout (0.1.0–1.0.0) — [P1-standard.md](plans/P1-standard.md)
 
-Added `sandbox/` (`sandbox/README-sandbox`) as an optional standard
-folder for test files, demos, and trying a project out by hand.
-`tools/idol-check` checks `sandbox/README-sandbox` whenever a repository
-has `sandbox/`. Done 2026-11-21 (W15).
+| Version | Milestone | Status |
+| --- | --- | --- |
+| **0.1.0** | Standard set, six `README-<folder>` templates, procedures in `README`, `tools/idol-check`, and `tam-clif` pilot | Done (2026-11-18) |
+| **0.2.0** | Work history moves under `work/` (`W<n>-<name>` and `work/history/`); retire `docs/ai/` | Done (2026-11-20) |
+| **0.2.1** | Allow `work/ai-blame-standard.md` in `tamlinux` and `tools/idol-check` | Done (2026-11-20) |
+| **1.0.0** | Every Tamlinux repository passes `tools/idol-check`; branches unified on `dev`, `AI-BLAME.md` everywhere, and `tamlinux` reorganized | Done (2026-11-20) |
 
-## 0.2.1: allow `work/ai-blame-standard.md`
+### Phase P2: Sandbox and shared keybindings (1.1.0–1.2.1) — [P2-sandbox-and-keybindings.md](plans/P2-sandbox-and-keybindings.md)
 
-Patch update to `tools/idol-check` and `arch/layout.md` so `tamlinux`
-can host the public AI blame standard at `work/ai-blame-standard.md`
-(work-session paperwork rather than code architecture). No other
-repository needs to change. Done 2026-11-20 (W14).
+| Version | Milestone | Status |
+| --- | --- | --- |
+| **1.1.0** | Add optional `sandbox/` folder (`sandbox/README-sandbox`) and validate in `tools/idol-check` | Done (2026-11-21) |
+| **1.2.0** | Add shared keybinding standard in `keys/keybindings.md` | Done (2026-11-25) |
+| **1.2.1** | Move per-program keybinding documentation into `keys/keybindings.md` with `keys/README-keys` | Done (2026-11-25) |
 
-## 0.2.0: work history lives under work/
+### Phase P3: Standard ROADMAP.md format (1.3.0) — [P3-roadmap-standard.md](plans/P3-roadmap-standard.md)
 
-There is no `docs/ai/` folder. Records from before the 2026-11-17
-cutover live in `work/history/`, read-only and not indexed; new
-sessions write `work/W<n>-<name>`. `tools/idol-check` reports a
-`docs/ai/` directory as a gap. Done 2026-11-20 under D278;
-repositories following the standard update their README and
-`work/README-work` with the rollout.
+| Version | Milestone | Status |
+| --- | --- | --- |
+| **1.3.0** | Define `arch/roadmap.md`, enforce `ROADMAP.md` structure and plan links in `tools/idol-check`, and update every repository | Done (2026-11-26) |
 
-## 0.1.0: the standard is written down
+## How a milestone is done
 
-The standard set, the `README-<folder>` text for arch, bugs, ideas,
-plans, reviews and work, the procedures in `README`, and
-`tools/idol-check`. tam-clif is the first repository to follow it,
-which tests the standard on a real project. Done 2026-11-18.
-
-## Before 1.0.0: every other repository, one at a time
-
-Bringing a repository up to standard does not change tam-idol's
-version; changing the standard on the way does. Each repository passes
-`tools/idol-check`, in this order: the newest and closest to the
-standard first.
-
-1. tam-clam
-2. tam-pane
-3. tam-last
-4. tam-data
-5. tam-ring
-6. tam-file
-7. tam-edit
-8. libtam
-9. tam
-10. tamlinux-tools
-11. tamlinux
-
-What every repository still needs, as of 2026-11-18:
-
-- `AI-BLAME.md` in place of `AI_PROVENANCE.md`;
-- the "Follows the tam-idol ... standard" line in README;
-- an `IN THIS REPOSITORY` section in every `README-<folder>`, with the
-  text above it made the same as tam-idol's;
-- `reviews/README-reviews`.
-
-Beyond those, `tools/idol-check <repository>` gives the full list.
-
-## 1.0.0: every repository follows the standard
-
-Every repository passes `tools/idol-check`, and a new repository starts
-from tam-idol. Done and tagged 2026-11-20 (W14).
-
-## Done since 0.1.0
-
-- **Branch names (D272).** `develop` was renamed to `dev` in libtam,
-  tam, tamlinux, tamlinux-packages and tamlinux-tools on 2026-11-20.
-  LIFECYCLE.md, agent routing, candidate preparation, tools and tests
-  name `dev`; `test` and `main` kept their names and rules. The version
-  of the standard did not change.
-- **The tamlinux layout.** Re-examined, reorganized into `src/`,
-  `tests/`, `arch/`, `bugs/`, `ideas/`, `plans/`, `reviews/`, and
-  `work/`, and brought up to the `tam-idol` 0.2.1 standard on branch
-  `dev` (W14, 2026-11-20).
-- **Blame, everywhere.** Renamed every remaining `AI_PROVENANCE.md` to
-  `AI-BLAME.md` (including the 8 in-repo `fred.*` plugins), moved the
-  public standard to `tamlinux/work/ai-blame-standard.md`, renamed the
-  `ai-blame` skill, guides, routing, memories, and private `blame/`
-  ledger, and repointed `AI-BLAME.md` links across all free repos
-  (`tam/AI-BLAME.md` queued for Codex while its exclusive claim holds).
-  Dated historical records were left untouched (W14, 2026-11-20).
-
-## Still to settle
-
-- **Existing records.** tam-edit's `reviews/review-001.md` becomes
-  `R1-...`; tamlinux's `docs/reviews/` moves to `reviews/`; tamlinux's
-  `bugs/0001-...` records become `B1-...`; tam-data's upper-case plan
-  names become lower case; `bugs/_template.md` files give way to the
-  template in `README-bugs`. Each rename keeps the record's text.
+A milestone is done when its acceptance checks in the phase plan pass and
+Fred has accepted the change. When a milestone lands, bump `VERSION`,
+update the phase plan's status, and update this roadmap in the same
+change.
